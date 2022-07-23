@@ -1,0 +1,20 @@
+{
+  "name": "lit-practice",
+  "version": "1.0.0",
+  "description": "Lit Practice",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sterashima78/lit-practice.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sterashima78/lit-practice/issues"
+  },
+  "homepage": "https://github.com/sterashima78/lit-practice#readme"
+}
