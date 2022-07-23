@@ -1,0 +1,26 @@
+{
+	"name": "Node.js",
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
+
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"dbaeumer.vscode-eslint",
+				"runem.lit-plugin"
+			]
+		}
+	},
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+
+	"postCreateCommand": "npm ci",
+
+	"remoteUser": "node",
+	"features": {
+		"git": "latest",
+		"homebrew": "latest"
+	}
+}

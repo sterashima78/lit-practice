@@ -1,11 +1,16 @@
 {
-  "name": "lit-practice",
-  "version": "1.0.0",
+  "name": "@sterashima78/lit-practice",
+  "version": "0.0.0",
   "description": "Lit Practice",
   "main": "index.js",
   "private": true,
-  "scripts": {
+  "devDependencies": {
+    "npm-run-all": "4.1.5",
+    "typescript": "4.7.4",
+    "vite": "3.0.2",
+    "@tsconfig/node16-strictest-esm": "1.0.3"
   },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sterashima78/lit-practice.git"
@@ -16,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/sterashima78/lit-practice/issues"
   },
-  "homepage": "https://github.com/sterashima78/lit-practice#readme"
+  "homepage": "https://github.com/sterashima78/lit-practice#readme",
+  "workspaces": [
+    "packages/*"
+  ]
 }

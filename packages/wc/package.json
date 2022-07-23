@@ -1,0 +1,37 @@
+{
+  "name": "@sterashima78/lit-practice-wc",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./*": "./lib/*"
+  },
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib",
+    "custom-elements.json"
+  ],
+  "scripts": {
+    "build:manufest": "cem analyze",
+    "build": "tsc",
+    "build:storybook": "storybook build",
+    "serve:storybook": "storybook dev -p 6006"
+  },
+  "dependencies": {
+    "lit": "2.2.8"
+  },
+  "devDependencies": {
+    "@custom-elements-manifest/analyzer": "0.6.3",
+    "storybook": "7.0.0-alpha.16",
+    "@storybook/web-components-webpack5": "7.0.0-alpha.16",
+    "@storybook/addon-essentials": "7.0.0-alpha.16",
+    "@storybook/addon-docs": "7.0.0-alpha.16",
+    "@babel/core": "7.18.9",
+    "babel-loader": "8.2.5",
+    "@mdx-js/react": "1.6.22",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  }
+}
