@@ -3,7 +3,9 @@
   "compilerOptions": {
     "outDir": "lib",
     "experimentalDecorators": true,
-    "declaration": true
+    "declaration": true,
+    "useDefineForClassFields": false,
+    "lib": ["DOM"]
   },
   "include": ["src/**/*.ts"],
   "exclude": ["src/**/*.stories.ts"]

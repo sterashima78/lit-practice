@@ -1,20 +1,20 @@
 import { StoryObj } from "@storybook/web-components";
 import { html } from "lit";
-import "./my-card";
+import "./my-accordion";
 
 export default {
-  title: "Card",
-  component: "my-card",
+  title: "Accordion",
+  component: "my-accordion",
 };
 
 export const Test: StoryObj = {
   args: {
-    title: "",
+    title: "hogehoge",
     body: "body",
   },
   render: (args) =>
     html`
-        <my-card>
+        <my-accordion>
             <p slot="header">${args.title}</p>
             <div>
                 <p>${args.body}</p>
@@ -24,6 +24,6 @@ export const Test: StoryObj = {
                 <p>contents</p>
                 <p>contents</p>
             </div>
-        </my-card>
+        </my-accordion>
     `,
 };
