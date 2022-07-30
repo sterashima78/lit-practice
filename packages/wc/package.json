@@ -38,7 +38,10 @@
     "@babel/core": "7.18.9",
     "babel-loader": "8.2.5",
     "@mdx-js/react": "1.6.22",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react": "16.14.0",
+    "react-dom": "16.14.0",
+    "lit-html": "2.2.7",
+    "typescript": "*",
+    "webpack": "5.74.0"
   }
 }
