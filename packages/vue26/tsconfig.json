@@ -18,6 +18,7 @@
   "exclude": ["src/**/*.stoires.ts"],
   "references": [{ "path": "./tsconfig.node.json" }],
   "vueCompilerOptions": {
+    "target": 2,
     "experimentalDisableTemplateSupport": true
   }
 }

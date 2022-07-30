@@ -12,12 +12,16 @@ export const Test: StoryObj = {
       components: {
         VMyCard,
       },
+      methods: {
+        log: (a: unknown) => console.log(a),
+      },
       template: /*html*/ `
                 <v-my-card>
                     <template #header>
                         <span>Header</span>
                     </template>
                     <template #default>
+                        <button @click="log('click btn')">log</button>
                         <p>content</p>
                         <p>content</p>
                         <p>content</p>

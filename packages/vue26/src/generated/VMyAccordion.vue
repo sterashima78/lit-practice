@@ -14,15 +14,21 @@
     </div>
   </my-accordion>
 </template>
-<script setup lang="ts">
+<script lang="ts">
 import "@sterashima78/lit-practice-wc/my-accordion.js";
-
-const props = defineProps<{
-  isOpen?: boolean;
-}>();
-const emit = defineEmits<{
-  (e: "close"): void;
-  (e: "open"): void;
-  (e: "toggle", payload: { isOpen: boolean }): void;
-}>();
+import { defineComponent } from "@vue/composition-api";
+export default defineComponent({
+  name: "VMyAccordion",
+  props: {
+    isOpen: { type: Boolean, required: false },
+  },
+  emits: {
+    close: null,
+    open: null,
+    toggle: (p: { isOpen: boolean }) => true,
+  },
+  setup(_, { emit }) {
+    return { emit };
+  },
+});
 </script>

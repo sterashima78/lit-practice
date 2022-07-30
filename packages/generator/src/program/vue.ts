@@ -1,7 +1,7 @@
 import type { Attribute, CustomElement, Event, Slot } from "custom-elements-manifest/schema";
 import type { ToEntry, ToProgram } from "./common.js";
 
-const isVoidEvent = (type: string): boolean => {
+export const isVoidEvent = (type: string): boolean => {
   const match = type.match(/CustomEvent<(.+)>/);
   return !(!!match && !!match[1] && !match[1].match("void"));
 };
@@ -16,7 +16,7 @@ const toPropAttr = (attr: Attribute): string => `:${attr.name}="${attr.fieldName
 const toEventAttr = (event: Event): string =>
   isVoidEvent(event.type.text)
     ? `@${event.name}="()=> emit('${event.name}')"`
-    : `@${event.name}="(e: ${event.type.text})=> emit('${event.name}', e.detail)"`;
+    : `@${event.name}="(e)=> emit('${event.name}', e.detail)"`;
 
 export const toTemplate = (
   tagName: string,

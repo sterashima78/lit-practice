@@ -3,7 +3,7 @@
     :is-open="isOpen"
     @close="() => emit('close')"
     @open="() => emit('open')"
-    @toggle="(e: CustomEvent<{ isOpen: boolean}>)=> emit('toggle', e.detail)"
+    @toggle="(e) => emit('toggle', e.detail)"
   >
     <div display="contents">
       <slot></slot>

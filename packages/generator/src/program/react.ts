@@ -10,7 +10,7 @@ import * as React from "react"
 import { ${p.name} as Tmp${p.name} } from "@sterashima78/lit-practice-wc"
 export const ${p.name} = createComponent(
     React,
-    '${p.name}',
+    '${p.tagName}',
     Tmp${p.name},
     {
     ${
@@ -25,4 +25,4 @@ export const ${p.name} = createComponent(
   ];
 };
 
-export const toEntry: ToEntry = (defs) => defs.map(ele => `export { ${ele.name} } from "./${ele.name}.tsx"`).join("\n");
+export const toEntry: ToEntry = (defs) => defs.map(ele => `export { ${ele.name} } from "./${ele.name}.js"`).join("\n");

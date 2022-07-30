@@ -12,7 +12,11 @@
     "dprint": "0.30.3",
     "storybook": "7.0.0-alpha.16",
     "@storybook/addon-essentials": "7.0.0-alpha.16",
-    "@storybook/addon-docs": "7.0.0-alpha.16"
+    "@storybook/addon-docs": "7.0.0-alpha.16",
+    "@babel/core": "7.18.9",
+    "react": "16.14.0",
+    "react-dom": "16.14.0",
+    "webpack": "5.74.0"
   },
   "scripts": {},
   "engines": {
