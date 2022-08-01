@@ -17,8 +17,7 @@
     "type-check": "vue-tsc --noEmit",
     "postbuild": "vue-tsc --declaration --emitDeclarationOnly",
     "build": "vite build",
-    "generate": "lit-practice-generator -f ../wc/custom-elements.json -t vue -o src/generated",
-    "postgenerate": "dprint fmt",
+    "generate": "lit-practice-generator-cli -f ../wc/custom-elements.json -t vue -o src/generated",
     "build:storybook": "storybook build",
     "serve:storybook": "storybook dev -p 6006"
   },
@@ -33,7 +32,7 @@
     "vue-tsc": "0.39.2",
     "@storybook/vue3-webpack5": "7.0.0-alpha.16",
     "@storybook/vue3": "7.0.0-alpha.16",
-    "@sterashima78/lit-practice-generator": "*",
+    "@sterashima78/lit-practice-generator-cli": "*",
     "webpack": "5.74.0",
     "@babel/core": "7.18.9",
     "@babel/preset-env": "7.18.9",

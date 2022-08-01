@@ -7,7 +7,7 @@
   "exports": {
     ".": "./lib/index.js",
     "./my-accordion.js": {
-      "types": "./lib/Card/my-accordion.d.ts",
+      "types": "./lib/Accordion/my-accordion.d.ts",
       "default": "./lib/Accordion/my-accordion.js"
     },
     "./my-card.js": {

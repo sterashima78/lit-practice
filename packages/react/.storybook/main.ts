@@ -11,10 +11,10 @@ export default {
     ...config,
     resolve: {
       ...config.resolve,
-     fallback: {
-       ...config.resolve.fallback,
-      assert: require.resolve('assert')
-     }
+      fallback: {
+        ...config.resolve.fallback,
+        assert: require.resolve("assert"),
+      },
     },
-  })
+  }),
 };

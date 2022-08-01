@@ -1,28 +1,61 @@
-<template>
-  <my-accordion
-    :is-open="isOpen"
-    @close="() => emit('close')"
-    @open="() => emit('open')"
-    @toggle="(e) => emit('toggle', e.detail)"
-  >
-    <div display="contents">
-      <slot></slot>
-    </div>
-
-    <div display="contents" slot="header">
-      <slot name="header"></slot>
-    </div>
-  </my-accordion>
-</template>
-<script setup lang="ts">
+<script lang="ts">
 import "@sterashima78/lit-practice-wc/my-accordion.js";
-
-const props = defineProps<{
-  isOpen?: boolean;
-}>();
-const emit = defineEmits<{
-  (e: "close"): void;
-  (e: "open"): void;
-  (e: "toggle", payload: { isOpen: boolean }): void;
-}>();
+import { h, useSlots, defineComponent } from "vue";
+export default defineComponent({
+  name: "VMyAccordion",
+  props: {
+    isOpen: { type: Boolean, required: false },
+  },
+  emits: {
+    close: null,
+    open: null,
+    toggle: (p: { isOpen: boolean }) => true,
+  },
+  setup(props, { emit }) {
+    const slots = useSlots();
+    return () =>
+      h(
+        "my-accordion",
+        {
+          domProps: {
+            isOpen: props["isOpen"],
+          },
+          on: {
+            close: () => emit("close"),
+            open: () => emit("open"),
+            toggle: (e: CustomEvent<{ isOpen: boolean }>) =>
+              emit("toggle", e.detail),
+          },
+        },
+        [
+          slots["default"] === undefined
+            ? undefined
+            : h(
+                "span",
+                {
+                  style: {
+                    display: "contents",
+                  },
+                  attrs: {},
+                },
+                [slots.default()]
+              ),
+          slots["header"] === undefined
+            ? undefined
+            : h(
+                "span",
+                {
+                  style: {
+                    display: "contents",
+                  },
+                  attrs: {
+                    slot: "header",
+                  },
+                },
+                [slots["header"]()]
+              ),
+        ]
+      );
+  },
+});
 </script>

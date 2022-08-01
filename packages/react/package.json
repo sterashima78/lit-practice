@@ -12,12 +12,12 @@
       }
     }
   },
+  "types": "dist/index.d.ts",
   "scripts": {
     "type-check": "tsc --noEmit",
     "postbuild": "tsc --declaration --emitDeclarationOnly",
     "build": "vite build",
-    "generate": "lit-practice-generator -f ../wc/custom-elements.json -t react -o src/generated",
-    "postgenerate": "dprint fmt",
+    "generate": "lit-practice-generator-cli -f ../wc/custom-elements.json -t react -o src/generated",
     "build:storybook": "storybook build",
     "serve:storybook": "storybook dev -p 6006"
   },
@@ -35,7 +35,7 @@
     "vite": "3.0.4",
     "@storybook/react-webpack5": "7.0.0-alpha.16",
     "@storybook/react": "7.0.0-alpha.16",
-    "@sterashima78/lit-practice-generator": "*",
+    "@sterashima78/lit-practice-generator-cli": "*",
     "webpack": "5.74.0",
     "@babel/core": "7.18.9",
     "jest-specific-snapshot": "4.0.0",

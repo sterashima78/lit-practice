@@ -1,21 +1,7 @@
-<template>
-  <my-accordion
-    :is-open="isOpen"
-    @close="() => emit('close')"
-    @open="() => emit('open')"
-    @toggle="(e) => emit('toggle', e.detail)"
-  >
-    <div display="contents">
-      <slot></slot>
-    </div>
-
-    <div display="contents" slot="header">
-      <slot name="header"></slot>
-    </div>
-  </my-accordion>
-</template>
+<template><render /></template>
 <script setup lang="ts">
 import "@sterashima78/lit-practice-wc/my-accordion.js";
+import { h, useSlots } from "vue";
 
 const props = defineProps<{
   isOpen?: boolean;
@@ -25,4 +11,42 @@ const emit = defineEmits<{
   (e: "open"): void;
   (e: "toggle", payload: { isOpen: boolean }): void;
 }>();
+const slots = useSlots();
+
+const render = () =>
+  h(
+    "my-accordion",
+    {
+      isOpen: props["isOpen"],
+      onClose: () => emit("close"),
+      onOpen: () => emit("open"),
+      onToggle: (e: CustomEvent<{ isOpen: boolean }>) =>
+        emit("toggle", e.detail),
+    },
+    [
+      slots["default"] === undefined
+        ? undefined
+        : h(
+            "span",
+            {
+              style: {
+                display: "contents",
+              },
+            },
+            [slots.default()]
+          ),
+      slots["header"] === undefined
+        ? undefined
+        : h(
+            "span",
+            {
+              style: {
+                display: "contents",
+              },
+              slot: "header",
+            },
+            [slots["header"]()]
+          ),
+    ]
+  );
 </script>

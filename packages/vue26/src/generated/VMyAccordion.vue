@@ -1,22 +1,11 @@
-<template>
-  <my-accordion
-    :is-open="isOpen"
-    @close="() => emit('close')"
-    @open="() => emit('open')"
-    @toggle="(e) => emit('toggle', e.detail)"
-  >
-    <div display="contents">
-      <slot></slot>
-    </div>
-
-    <div display="contents" slot="header">
-      <slot name="header"></slot>
-    </div>
-  </my-accordion>
-</template>
 <script lang="ts">
 import "@sterashima78/lit-practice-wc/my-accordion.js";
-import { defineComponent } from "@vue/composition-api";
+import {
+  h as _h,
+  useSlots,
+  defineComponent,
+  getCurrentInstance,
+} from "@vue/composition-api";
 export default defineComponent({
   name: "VMyAccordion",
   props: {
@@ -27,8 +16,53 @@ export default defineComponent({
     open: null,
     toggle: (p: { isOpen: boolean }) => true,
   },
-  setup(_, { emit }) {
-    return { emit };
+  setup(props, { emit }) {
+    const slots = useSlots();
+    const vm = getCurrentInstance();
+    const h = _h.bind(vm);
+    return () =>
+      h(
+        "my-accordion",
+        {
+          domProps: {
+            isOpen: props["isOpen"],
+          },
+          on: {
+            close: () => emit("close"),
+            open: () => emit("open"),
+            toggle: (e: CustomEvent<{ isOpen: boolean }>) =>
+              emit("toggle", e.detail),
+          },
+        },
+        [
+          slots["default"] === undefined
+            ? undefined
+            : h(
+                "span",
+                {
+                  style: {
+                    display: "contents",
+                  },
+                  attrs: {},
+                },
+                [slots.default()]
+              ),
+          slots["header"] === undefined
+            ? undefined
+            : h(
+                "span",
+                {
+                  style: {
+                    display: "contents",
+                  },
+                  attrs: {
+                    slot: "header",
+                  },
+                },
+                [slots["header"]()]
+              ),
+        ]
+      );
   },
 });
 </script>

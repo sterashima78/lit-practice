@@ -1,5 +1,5 @@
-import * as React from "react"
 import { Meta, StoryObj } from "@storybook/react";
+import * as React from "react";
 import { MyCard } from "./generated/MyCard";
 const meta: Meta = {
   component: MyCard,
@@ -8,10 +8,10 @@ const meta: Meta = {
 export default meta;
 
 export const Test: StoryObj = {
-  render: ()=> 
+  render: () => (
     <MyCard>
       <p slot="header">Header</p>
-      <button onClick={()=> console.log('click btn')}>log</button>
+      <button onClick={() => console.log("click btn")}>log</button>
       <p>content</p>
       <p>content</p>
       <p>content</p>
@@ -19,4 +19,5 @@ export const Test: StoryObj = {
       <p>content</p>
       <p>content</p>
     </MyCard>
-}
+  ),
+};

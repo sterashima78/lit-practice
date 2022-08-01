@@ -1,0 +1,10 @@
+{
+  "extends": "@tsconfig/node16-strictest-esm/tsconfig.json",
+  "esm": true,
+  "include": ["src/**/*"],
+  "compilerOptions": {
+    "declaration": true,
+    "declarationDir": "dts",
+    "outDir": "dts"
+  }
+}

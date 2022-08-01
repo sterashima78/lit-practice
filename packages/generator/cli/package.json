@@ -1,0 +1,34 @@
+{
+  "private": true,
+  "name": "@sterashima78/lit-practice-generator-cli",
+  "infra": "monorepo",
+  "scripts": {
+    "build": "packemon build",
+    "clean": "packemon clean",
+    "pack": "NODE_ENV=production packemon pack --addEngines --declaration",
+    "type-check": "tsc --noEmit",
+    "validate": "packemon validate",
+    "watch": "packemon watch"
+  },
+  "dependencies": {
+    "@sterashima78/lit-practice-generator-common": "*",
+    "@sterashima78/lit-practice-generator-react": "*",
+    "@sterashima78/lit-practice-generator-vue": "*",
+    "custom-elements-manifest": "1.0.0",
+    "commander": "9.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "18.6.3"
+  },
+  "packemon": {
+    "inputs": {
+      "bin": "./index.js"
+    },
+    "platform": "node"
+  },
+  "bin": "./mjs/index.mjs",
+  "files": [
+    "mjs/**/*.{mjs,map}",
+    "src/**/*.{js,jsx,json}"
+  ]
+}

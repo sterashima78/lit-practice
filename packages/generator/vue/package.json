@@ -1,0 +1,57 @@
+{
+  "private": true,
+  "name": "@sterashima78/lit-practice-generator-vue",
+  "infra": "monorepo",
+  "scripts": {
+    "build": "packemon build --declaration --addExports",
+    "clean": "packemon clean",
+    "pack": "NODE_ENV=production packemon pack --addEngines --declaration",
+    "type-check": "tsc --noEmit",
+    "validate": "packemon validate",
+    "watch": "packemon watch"
+  },
+  "packemon": [
+    {
+      "inputs": {
+        "3": "src/vue3.ts",
+        "26": "src/vue26.ts",
+        "index": "src/index.ts"
+      },
+      "platform": "node"
+    }
+  ],
+  "dependencies": {
+    "@sterashima78/lit-practice-generator-common": "*"
+  },
+  "main": "./mjs/index.mjs",
+  "type": "module",
+  "files": [
+    "dts/**/*.d.ts",
+    "mjs/**/*.{mjs,map}",
+    "src/**/*.{ts,tsx,json}"
+  ],
+  "types": "./dts/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dts/index.d.ts",
+      "node": {
+        "import": "./mjs/index.mjs"
+      }
+    },
+    "./3": {
+      "default": "./mjs/vue3.mjs",
+      "types": "./dts/vue3.d.ts"
+    },
+    "./26": {
+      "default": "./mjs/vue26.mjs",
+      "types": "./dts/vue26.d.ts"
+    },
+    "./package.json": "./package.json",
+    "./*": {
+      "types": "./dts/*.d.ts",
+      "node": {
+        "import": "./mjs/*.mjs"
+      }
+    }
+  }
+}

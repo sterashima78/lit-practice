@@ -1,0 +1,45 @@
+diff --git a/index.js b/index.js
+index dcc7e6cbe9c045048b5aa04b2b17c2c8bb06b362..e356d08303af42550a1ca9bdf2d1bba0155d5ef8 100644
+--- a/index.js
++++ b/index.js
+@@ -1,20 +1,23 @@
+-try {
+-  var vueVersion = require('vue').version
+-} catch (e) {}
++/**
++ * 複数バージョン存在するときに正しく解決できないためチェック自体をしないようにする
++ */
++// try {
++//   var vueVersion = require('vue').version
++// } catch (e) {}
+ 
+-var packageName = require('./package.json').name
+-var packageVersion = require('./package.json').version
+-if (vueVersion && vueVersion !== packageVersion) {
+-  var vuePath = require.resolve('vue')
+-  var packagePath = require.resolve('./package.json')
+-  throw new Error(
+-    '\n\nVue packages version mismatch:\n\n' +
+-    '- vue@' + vueVersion + ' (' + vuePath + ')\n' +
+-    '- ' + packageName + '@' + packageVersion + ' (' + packagePath + ')\n\n' +
+-    'This may cause things to work incorrectly. Make sure to use the same version for both.\n' +
+-    'If you are using vue-loader@>=10.0, simply update vue-template-compiler.\n' +
+-    'If you are using vue-loader@<10.0 or vueify, re-installing vue-loader/vueify should bump ' + packageName + ' to the latest.\n'
+-  )
+-}
++// var packageName = require('./package.json').name
++// var packageVersion = require('./package.json').version
++// if (vueVersion && vueVersion !== packageVersion) {
++//   var vuePath = require.resolve('vue')
++//   var packagePath = require.resolve('./package.json')
++//   throw new Error(
++//     '\n\nVue packages version mismatch:\n\n' +
++//     '- vue@' + vueVersion + ' (' + vuePath + ')\n' +
++//     '- ' + packageName + '@' + packageVersion + ' (' + packagePath + ')\n\n' +
++//     'This may cause things to work incorrectly. Make sure to use the same version for both.\n' +
++//     'If you are using vue-loader@>=10.0, simply update vue-template-compiler.\n' +
++//     'If you are using vue-loader@<10.0 or vueify, re-installing vue-loader/vueify should bump ' + packageName + ' to the latest.\n'
++//   )
++// }
+ 
+ module.exports = require('./build')
