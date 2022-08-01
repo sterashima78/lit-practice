@@ -1,5 +1,9 @@
 {
   "sourceType": "unambiguous",
+  "assumptions": {
+    "setPublicClassFields": true,
+    "privateFieldsAsProperties": true
+  },
   "presets": [
     [
       "@babel/preset-env",
@@ -16,7 +20,8 @@
     [
       "@babel/plugin-proposal-decorators",
       {
-        "legacy": true
+        "version": "2018-09",
+        "decoratorsBeforeExport": true
       }
     ],
     [
@@ -62,6 +67,9 @@
         "absoluteImports": "core-js",
         "version": "3.23.5"
       }
-    ]
+    ],
+    ["@babel/plugin-transform-typescript", {
+      "allowDeclareFields": true
+    }]
   ]
 }

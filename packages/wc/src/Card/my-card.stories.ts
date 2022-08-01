@@ -1,18 +1,19 @@
 import { StoryObj } from "@storybook/web-components";
-import { html } from 'lit';
-import "./my-card"
+import { html } from "lit";
+import "./my-card";
 
 export default {
-    title: 'Card',
-    component: "my-card"
+  title: "Card",
+  component: "my-card",
 };
 
-export const Default: StoryObj = {
-    args: {
-        title: "",
-        body: "body"
-    },
-    render: (args) => html`
+export const Test: StoryObj = {
+  args: {
+    title: "",
+    body: "body",
+  },
+  render: (args) =>
+    html`
         <my-card>
             <p slot="header">${args.title}</p>
             <div>
@@ -24,5 +25,5 @@ export const Default: StoryObj = {
                 <p>contents</p>
             </div>
         </my-card>
-    `
+    `,
 };

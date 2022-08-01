@@ -1,5 +1,5 @@
-import { html, css, LitElement } from 'lit'
-import { customElement } from 'lit/decorators.js'
+import { css, html, LitElement } from "lit";
+import { customElement } from "lit/decorators.js";
 
 /**
  * An card element.
@@ -7,9 +7,9 @@ import { customElement } from 'lit/decorators.js'
  * @slot - main contents
  * @slot header - header contents
  */
-@customElement('my-card')
+@customElement("my-card")
 export class MyCard extends LitElement {
-    static override styles = css`
+  static override styles = css`
     :host {
       width: 100%;
       height: auto;
@@ -50,10 +50,10 @@ export class MyCard extends LitElement {
         border-radius: 8px;
         box-shadow: 0 4px 15px rgba(0,0,0,.2);
     }
-  `
+  `;
 
-    override render() {
-        return html`
+  override render() {
+    return html`
         <div class="card card-skin">
             <div class="card__imgframe"></div>
             <div class="card__textbox">
@@ -64,14 +64,12 @@ export class MyCard extends LitElement {
                     <slot></slot>
                 </div>
             </div>
-        </div>`
-    }
-
-
+        </div>`;
+  }
 }
 
 declare global {
   interface HTMLElementTagNameMap {
-    'my-card': MyCard
+    "my-card": MyCard;
   }
 }

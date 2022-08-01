@@ -6,7 +6,16 @@
   "main": "lib/index.js",
   "exports": {
     ".": "./lib/index.js",
-    "./*": "./lib/*"
+    "./my-accordion.js": {
+      "types": "./lib/Card/my-accordion.d.ts",
+      "default": "./lib/Accordion/my-accordion.js"
+    },
+    "./my-card.js": {
+      "import": {
+        "types": "./lib/Card/my-card.d.ts",
+        "default": "./lib/Card/my-card.js"
+      }
+    }
   },
   "types": "lib/index.d.ts",
   "files": [
@@ -14,8 +23,9 @@
     "custom-elements.json"
   ],
   "scripts": {
-    "build:manufest": "cem analyze",
+    "build:manufest": "cem analyze --globs 'src/**/*' --exclude 'src/**/*.stories.ts' --litelement",
     "build": "tsc",
+    "postbuild": "npm-run-all build:manufest",
     "build:storybook": "storybook build",
     "serve:storybook": "storybook dev -p 6006"
   },
@@ -24,14 +34,14 @@
   },
   "devDependencies": {
     "@custom-elements-manifest/analyzer": "0.6.3",
-    "storybook": "7.0.0-alpha.16",
     "@storybook/web-components-webpack5": "7.0.0-alpha.16",
-    "@storybook/addon-essentials": "7.0.0-alpha.16",
-    "@storybook/addon-docs": "7.0.0-alpha.16",
     "@babel/core": "7.18.9",
     "babel-loader": "8.2.5",
     "@mdx-js/react": "1.6.22",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react": "16.14.0",
+    "react-dom": "16.14.0",
+    "lit-html": "2.2.7",
+    "typescript": "*",
+    "webpack": "5.74.0"
   }
 }

@@ -1,0 +1,49 @@
+{
+  "name": "@sterashima78/lit-practice-vue27",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "main": "dist/vue-my-components.js",
+  "exports": {
+    ".": {
+      "import": {
+        "default": "./dist/vue-my-components.js",
+        "types": "./dist/index.d.ts"
+      }
+    }
+  },
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "type-check": "vue-tsc --noEmit",
+    "postbuild": "vue-tsc --declaration --emitDeclarationOnly",
+    "build": "vite build",
+    "preview": "vite preview",
+    "generate": "lit-practice-generator -f ../wc/custom-elements.json -t vue -o src/generated",
+    "postgenerate": "dprint fmt",
+    "build:storybook": "storybook build",
+    "serve:storybook": "storybook dev -p 6006"
+  },
+  "dependencies": {
+    "@sterashima78/lit-practice-wc": "*"
+  },
+  "devDependencies": {
+    "vue": "2.7.8",
+    "@vitejs/plugin-vue2": "1.1.2",
+    "typescript": "4.7.4",
+    "vite": "3.0.3",
+    "vue-tsc": "0.39.2",
+    "@storybook/vue-webpack5": "7.0.0-alpha.16",
+    "@storybook/vue": "7.0.0-alpha.16",
+    "@sterashima78/lit-practice-generator": "*",
+    "@babel/core": "7.18.9",
+    "@babel/preset-env": "7.18.9",
+    "babel-loader": "8.2.5",
+    "css-loader": "6.7.1",
+    "webpack": "5.74.0",
+    "vue-loader": "15.10.0",
+    "vue-template-compiler": "2.7.8"
+  },
+  "peerDependencies": {
+    "vue": "^2.7.0"
+  }
+}

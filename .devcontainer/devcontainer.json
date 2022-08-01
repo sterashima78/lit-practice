@@ -1,26 +1,30 @@
 {
-	"name": "Node.js",
-	"build": {
-		"dockerfile": "Dockerfile"
-	},
+  "name": "Node.js",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
 
-	"customizations": {
-		"vscode": {
-			"extensions": [
-				"dbaeumer.vscode-eslint",
-				"runem.lit-plugin"
-			]
-		}
-	},
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "runem.lit-plugin",
+        "zjcompt.es6-string-javascript",
+        "Tobermory.es6-string-html",
+        "Vue.volar",
+        "Vue.vscode-typescript-vue-plugin"
+      ]
+    }
+  },
 
-	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	// "forwardPorts": [],
+  // Use 'forwardPorts' to make a list of ports inside the container available locally.
+  // "forwardPorts": [],
 
-	"postCreateCommand": "npm ci",
+  "postCreateCommand": "npm ci",
 
-	"remoteUser": "node",
-	"features": {
-		"git": "latest",
-		"homebrew": "latest"
-	}
+  "remoteUser": "node",
+  "features": {
+    "git": "latest",
+    "homebrew": "latest"
+  }
 }
