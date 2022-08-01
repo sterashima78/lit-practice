@@ -12,7 +12,7 @@ export default defineConfig({
       fileName: "vue-my-components",
     },
     rollupOptions: {
-      external: ["vue"],
+      external: ["vue", "@vue/composition-api"],
       output: {
         globals: {
           vue: "Vue",

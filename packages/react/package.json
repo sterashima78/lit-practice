@@ -12,6 +12,7 @@
       }
     }
   },
+  "types": "dist/index.d.ts",
   "scripts": {
     "type-check": "tsc --noEmit",
     "postbuild": "tsc --declaration --emitDeclarationOnly",
