@@ -1,33 +1,22 @@
 <template><render /></template>
 <script setup lang="ts">
-import "@sterashima78/lit-practice-wc/my-accordion.js";
+import "@sterashima78/lit-practice-wc/my-card.js";
 import { h, useSlots } from "vue";
 
-const props = defineProps<{
-  isOpen?: boolean;
-}>();
-const emit = defineEmits<{
-  (e: "close"): void;
-  (e: "open"): void;
-  (e: "toggle", payload: { isOpen: boolean }): void;
-}>();
+const props = defineProps<{}>();
+const emit = defineEmits<{}>();
 const slots = useSlots();
 
 const render = () =>
   h(
-    "my-accordion",
-    {
-      isOpen: props["isOpen"],
-      onClose: () => emit("close"),
-      onOpen: () => emit("open"),
-      onToggle: (e: CustomEvent<{ isOpen: boolean }>) =>
-        emit("toggle", e.detail),
-    },
+    "my-card",
+    {},
+
     [
       slots["default"] === undefined
         ? undefined
         : h(
-            "span",
+            "div",
             {
               style: {
                 display: "contents",
@@ -38,7 +27,7 @@ const render = () =>
       slots["header"] === undefined
         ? undefined
         : h(
-            "span",
+            "div",
             {
               style: {
                 display: "contents",

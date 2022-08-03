@@ -1,48 +1,31 @@
 <script lang="ts">
-import "@sterashima78/lit-practice-wc/my-accordion.js";
-import {
-  h as _h,
-  useSlots,
-  defineComponent,
-  getCurrentInstance,
-} from "@vue/composition-api";
+import "@sterashima78/lit-practice-wc/my-card.js";
+import { h, useSlots, defineComponent } from "vue";
 export default defineComponent({
-  name: "VMyAccordion",
-  props: {
-    isOpen: { type: Boolean, required: false },
-  },
-  emits: {
-    close: null,
-    open: null,
-    toggle: (p: { isOpen: boolean }) => true,
-  },
+  name: "VMyCard",
+  props: {},
+  emits: {},
   setup(props, { emit }) {
     const slots = useSlots();
-    const vm = getCurrentInstance();
-    const h = _h.bind(vm);
+
     return () =>
       h(
-        "my-accordion",
+        "my-card",
         {
-          domProps: {
-            isOpen: props["isOpen"],
-          },
-          on: {
-            close: () => emit("close"),
-            open: () => emit("open"),
-            toggle: (e: CustomEvent<{ isOpen: boolean }>) =>
-              emit("toggle", e.detail),
-          },
+          domProps: {},
+          on: {},
         },
+
         [
           slots["default"] === undefined
             ? undefined
             : h(
-                "span",
+                "div",
                 {
                   style: {
                     display: "contents",
                   },
+
                   attrs: {},
                 },
                 [slots.default()]
@@ -50,11 +33,12 @@ export default defineComponent({
           slots["header"] === undefined
             ? undefined
             : h(
-                "span",
+                "div",
                 {
                   style: {
                     display: "contents",
                   },
+
                   attrs: {
                     slot: "header",
                   },

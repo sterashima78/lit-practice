@@ -4,8 +4,8 @@ import "@sterashima78/lit-practice-wc/my-accordion.js";
 export type MyAccordionProps = {
   children: ReactNode;
   isOpen: boolean;
-  onClose?: () => void;
   onOpen?: () => void;
+  onClose?: () => void;
   onToggle?: (e: { isOpen: boolean }) => void;
 };
 
@@ -14,8 +14,8 @@ export const MyAccordion = (props: MyAccordionProps): JSX.Element => {
 
   const {
     children,
-    onClose,
     onOpen,
+    onClose,
     onToggle,
     isOpen,
   } = props;
@@ -28,14 +28,6 @@ export const MyAccordion = (props: MyAccordionProps): JSX.Element => {
     }
   }, [isOpen]);
 
-  // for close event
-  useEffect(() => {
-    if (!!onClose) ref.current?.addEventListener("close", onClose);
-    return () => {
-      if (!!onClose) ref.current?.removeEventListener("close", onClose);
-    };
-  }, [onClose]);
-
   // for open event
   useEffect(() => {
     if (!!onOpen) ref.current?.addEventListener("open", onOpen);
@@ -43,6 +35,14 @@ export const MyAccordion = (props: MyAccordionProps): JSX.Element => {
       if (!!onOpen) ref.current?.removeEventListener("open", onOpen);
     };
   }, [onOpen]);
+
+  // for close event
+  useEffect(() => {
+    if (!!onClose) ref.current?.addEventListener("close", onClose);
+    return () => {
+      if (!!onClose) ref.current?.removeEventListener("close", onClose);
+    };
+  }, [onClose]);
 
   // for toggle event
   useEffect(() => {

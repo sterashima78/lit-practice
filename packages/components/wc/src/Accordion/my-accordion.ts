@@ -45,11 +45,11 @@ export class MyAccordion extends LitElement {
   toggle() {
     this.isOpen = !this.isOpen;
     if (this.isOpen) {
-      /** @type {CustomEvent<void>} close - 閉じたとき */
-      this.dispatchEvent(new CustomEvent("close"));
-    } else {
       /** @type {CustomEvent<void>} open - 開いたとき */
       this.dispatchEvent(new CustomEvent("open"));
+    } else {
+      /** @type {CustomEvent<void>} close - 閉じたとき */
+      this.dispatchEvent(new CustomEvent("close"));
     }
     /** @type {CustomEvent<{ isOpen: boolean}>} toggle - 開閉したとき */
     this.dispatchEvent(

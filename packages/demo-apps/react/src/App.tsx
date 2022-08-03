@@ -6,7 +6,8 @@ import "./App.css";
 function App() {
   const [count, setCount] = useState(0);
   const [isOpen, setIsOpen] = useState(true);
-  const [isUseLogger, setIsUseLogger] = useState(true);
+  const [isUsingToggleLogger, setIsUsingToggleLogger] = useState(true);
+  const [isUsingOpenLogger, setIsUsingOpenLogger] = useState(true);
 
   return (
     <div className="App">
@@ -24,20 +25,35 @@ function App() {
       </label>
 
       <label>
-        <input type="checkbox" onChange={() => setIsUseLogger(!isUseLogger)} checked={isUseLogger} />
-        with Logger
+        <input
+          type="checkbox"
+          onChange={() => setIsUsingToggleLogger(!isUsingToggleLogger)}
+          checked={isUsingToggleLogger}
+        />
+        with Toggle Logger
+      </label>
+
+      <label>
+        <input type="checkbox" onChange={() => setIsUsingOpenLogger(!isUsingOpenLogger)} checked={isUsingOpenLogger} />
+        with Open Logger
       </label>
 
       <MyAccordion
         isOpen={isOpen}
-        onToggle={isUseLogger
+        onToggle={isUsingToggleLogger
           ? ({ isOpen }) => {
             setIsOpen(isOpen);
             console.log(`set isOpen=${isOpen}`);
           }
           : ({ isOpen }) => setIsOpen(isOpen)}
+        onOpen={isUsingOpenLogger
+          ? () => {
+            console.log("open");
+          }
+          : () => ""}
       >
         <h1 slot="header">Vite + React</h1>
+        <p slot="header" className="subtitle">multiple slot</p>
         <MyCard>
           <p slot="header">Counter</p>
           <button onClick={() => setCount((count) => count + 1)}>

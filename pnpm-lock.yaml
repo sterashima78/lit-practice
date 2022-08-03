@@ -39,6 +39,187 @@ importers:
       vite: 3.0.2
       webpack: 5.74.0
 
+  packages/components/react:
+    specifiers:
+      '@babel/core': 7.18.9
+      '@lit-labs/react': 1.0.7
+      '@sterashima78/lit-practice-generator-cli': '*'
+      '@sterashima78/lit-practice-wc': '*'
+      '@storybook/react': 7.0.0-alpha.16
+      '@storybook/react-webpack5': 7.0.0-alpha.16
+      '@types/node': 18.6.2
+      '@types/react': 17.0.0
+      '@types/react-dom': 17.0.0
+      '@vitejs/plugin-react': 2.0.0
+      assert: 2.0.0
+      jest: 26.6.3
+      jest-specific-snapshot: 4.0.0
+      react: 17.0.2
+      react-dom: 17.0.2
+      require-from-string: 2.0.2
+      typescript: 4.7.4
+      vite: 3.0.4
+      webpack: 5.74.0
+    dependencies:
+      '@lit-labs/react': 1.0.7
+      '@sterashima78/lit-practice-wc': link:../wc
+    devDependencies:
+      '@babel/core': 7.18.9
+      '@sterashima78/lit-practice-generator-cli': link:../../generator/cli
+      '@storybook/react': 7.0.0-alpha.16_skhzkrn2l67t4nuvi4va336x3u
+      '@storybook/react-webpack5': 7.0.0-alpha.16_bzfu243httafqgg7biliqjfun4
+      '@types/node': 18.6.2
+      '@types/react': 17.0.0
+      '@types/react-dom': 17.0.0
+      '@vitejs/plugin-react': 2.0.0_vite@3.0.4
+      assert: 2.0.0
+      jest: 26.6.3
+      jest-specific-snapshot: 4.0.0_jest@26.6.3
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
+      require-from-string: 2.0.2
+      typescript: 4.7.4
+      vite: 3.0.4
+      webpack: 5.74.0
+
+  packages/components/vue26:
+    specifiers:
+      '@babel/core': 7.18.9
+      '@babel/preset-env': 7.18.9
+      '@sterashima78/lit-practice-generator-cli': '*'
+      '@sterashima78/lit-practice-wc': '*'
+      '@storybook/vue': 7.0.0-alpha.16
+      '@storybook/vue-webpack5': 7.0.0-alpha.16
+      '@vue/composition-api': 1.7.0
+      '@vue/runtime-core': 3.2.37
+      babel-loader: 8.2.5
+      css-loader: 6.7.1
+      typescript: 4.7.4
+      vite: 3.0.3
+      vite-plugin-vue2: 2.0.2
+      vue: 2.6.14
+      vue-loader: 15.9.8
+      vue-template-compiler: 2.6.14
+      vue-tsc: 0.39.2
+      webpack: 5.74.0
+    dependencies:
+      '@sterashima78/lit-practice-wc': link:../wc
+    devDependencies:
+      '@babel/core': 7.18.9
+      '@babel/preset-env': 7.18.9_@babel+core@7.18.9
+      '@sterashima78/lit-practice-generator-cli': link:../../generator/cli
+      '@storybook/vue': 7.0.0-alpha.16_ei3qfhl7qscv7tmx56fosimdo4
+      '@storybook/vue-webpack5': 7.0.0-alpha.16_sioln5ntcu3unpnt3us2shjnwu
+      '@vue/composition-api': 1.7.0_vue@2.6.14
+      '@vue/runtime-core': 3.2.37
+      babel-loader: 8.2.5_y3lv6tn6yokher4u7xj4j22px4
+      css-loader: 6.7.1_webpack@5.74.0
+      typescript: 4.7.4
+      vite: 3.0.3
+      vite-plugin-vue2: 2.0.2_j2frrzyiblgqccpxtan742dazy
+      vue: 2.6.14
+      vue-loader: 15.9.8_bezci72evhi56f6uchde6cmz2a
+      vue-template-compiler: 2.6.14_nw276o374jv43s3zuuenap2suq
+      vue-tsc: 0.39.2_typescript@4.7.4
+      webpack: 5.74.0
+
+  packages/components/vue27:
+    specifiers:
+      '@babel/core': 7.18.9
+      '@babel/preset-env': 7.18.9
+      '@sterashima78/lit-practice-generator-cli': '*'
+      '@sterashima78/lit-practice-wc': '*'
+      '@storybook/vue': 7.0.0-alpha.16
+      '@storybook/vue-webpack5': 7.0.0-alpha.16
+      '@vitejs/plugin-vue2': 1.1.2
+      babel-loader: 8.2.5
+      css-loader: 6.7.1
+      typescript: 4.7.4
+      vite: 3.0.3
+      vue: 2.7.8
+      vue-loader: 15.10.0
+      vue-template-compiler: 2.7.8
+      vue-tsc: 0.39.2
+      webpack: 5.74.0
+    dependencies:
+      '@sterashima78/lit-practice-wc': link:../wc
+    devDependencies:
+      '@babel/core': 7.18.9
+      '@babel/preset-env': 7.18.9_@babel+core@7.18.9
+      '@sterashima78/lit-practice-generator-cli': link:../../generator/cli
+      '@storybook/vue': 7.0.0-alpha.16_xw2ouhz4krgrq7l4jasytmo2n4
+      '@storybook/vue-webpack5': 7.0.0-alpha.16_uet5pthetb3bmkfbzsq2zkfvty
+      '@vitejs/plugin-vue2': 1.1.2_vite@3.0.3+vue@2.7.8
+      babel-loader: 8.2.5_y3lv6tn6yokher4u7xj4j22px4
+      css-loader: 6.7.1_webpack@5.74.0
+      typescript: 4.7.4
+      vite: 3.0.3
+      vue: 2.7.8
+      vue-loader: 15.10.0_kje6jbonrwud63vsczpj55uqta
+      vue-template-compiler: 2.7.8
+      vue-tsc: 0.39.2_typescript@4.7.4
+      webpack: 5.74.0
+
+  packages/components/vue3:
+    specifiers:
+      '@babel/core': 7.18.9
+      '@babel/preset-env': 7.18.9
+      '@sterashima78/lit-practice-generator-cli': '*'
+      '@sterashima78/lit-practice-wc': '*'
+      '@storybook/vue3': 7.0.0-alpha.16
+      '@storybook/vue3-webpack5': 7.0.0-alpha.16
+      '@vitejs/plugin-vue': 3.0.1
+      '@vue/compiler-sfc': 3.2.37
+      babel-loader: 8.2.5
+      typescript: 4.7.4
+      vite: 3.0.3
+      vue: 3.2.37
+      vue-tsc: 0.39.2
+      webpack: 5.74.0
+    dependencies:
+      '@sterashima78/lit-practice-wc': link:../wc
+    devDependencies:
+      '@babel/core': 7.18.9
+      '@babel/preset-env': 7.18.9_@babel+core@7.18.9
+      '@sterashima78/lit-practice-generator-cli': link:../../generator/cli
+      '@storybook/vue3': 7.0.0-alpha.16_rcc7wdfrplznkqnj4fxo2anxhq
+      '@storybook/vue3-webpack5': 7.0.0-alpha.16_et2oyu25s4nqtghprrf6t4mldi
+      '@vitejs/plugin-vue': 3.0.1_vite@3.0.3+vue@3.2.37
+      '@vue/compiler-sfc': 3.2.37
+      babel-loader: 8.2.5_y3lv6tn6yokher4u7xj4j22px4
+      typescript: 4.7.4
+      vite: 3.0.3
+      vue: 3.2.37
+      vue-tsc: 0.39.2_typescript@4.7.4
+      webpack: 5.74.0
+
+  packages/components/wc:
+    specifiers:
+      '@babel/core': 7.18.9
+      '@custom-elements-manifest/analyzer': 0.6.3
+      '@mdx-js/react': 1.6.22
+      '@storybook/web-components-webpack5': 7.0.0-alpha.16
+      babel-loader: 8.2.5
+      lit: 2.2.8
+      lit-html: 2.2.7
+      react: 16.14.0
+      react-dom: 16.14.0
+      typescript: '*'
+      webpack: 5.74.0
+    dependencies:
+      lit: 2.2.8
+    devDependencies:
+      '@babel/core': 7.18.9
+      '@custom-elements-manifest/analyzer': 0.6.3
+      '@mdx-js/react': 1.6.22_react@16.14.0
+      '@storybook/web-components-webpack5': 7.0.0-alpha.16_gosni6jggek46egtfww7bn7mue
+      babel-loader: 8.2.5_y3lv6tn6yokher4u7xj4j22px4
+      lit-html: 2.2.7
+      react: 16.14.0
+      react-dom: 16.14.0_react@16.14.0
+      typescript: 4.7.4
+      webpack: 5.74.0
+
   packages/demo-apps/react:
     specifiers:
       '@sterashima78/lit-practice-react': '*'
@@ -50,7 +231,7 @@ importers:
       typescript: ^4.6.4
       vite: ^3.0.0
     dependencies:
-      '@sterashima78/lit-practice-react': link:../../react
+      '@sterashima78/lit-practice-react': link:../../components/react
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
     devDependencies:
@@ -72,7 +253,7 @@ importers:
       vue-template-compiler: 2.6.14
       vue-tsc: ^0.38.4
     dependencies:
-      '@sterashima78/lit-practice-vue26': link:../../vue26
+      '@sterashima78/lit-practice-vue26': link:../../components/vue26
       '@vue/composition-api': 1.7.0_vue@2.6.14
       vue: 2.6.14
     devDependencies:
@@ -92,7 +273,7 @@ importers:
       vue: 2.7.8
       vue-tsc: ^0.38.4
     dependencies:
-      '@sterashima78/lit-practice-vue27': link:../../vue27
+      '@sterashima78/lit-practice-vue27': link:../../components/vue27
       vue: 2.7.8
     devDependencies:
       '@vitejs/plugin-vue2': 1.1.2_vite@3.0.4+vue@2.7.8
@@ -109,7 +290,7 @@ importers:
       vue: ^3.2.37
       vue-tsc: ^0.38.4
     dependencies:
-      '@sterashima78/lit-practice-vue3': link:../../vue3
+      '@sterashima78/lit-practice-vue3': link:../../components/vue3
       vue: 3.2.37
     devDependencies:
       '@vitejs/plugin-vue': 3.0.1_vite@3.0.4+vue@3.2.37
@@ -151,187 +332,6 @@ importers:
       '@sterashima78/lit-practice-generator-common': '*'
     dependencies:
       '@sterashima78/lit-practice-generator-common': link:../common
-
-  packages/react:
-    specifiers:
-      '@babel/core': 7.18.9
-      '@lit-labs/react': 1.0.7
-      '@sterashima78/lit-practice-generator-cli': '*'
-      '@sterashima78/lit-practice-wc': '*'
-      '@storybook/react': 7.0.0-alpha.16
-      '@storybook/react-webpack5': 7.0.0-alpha.16
-      '@types/node': 18.6.2
-      '@types/react': 17.0.0
-      '@types/react-dom': 17.0.0
-      '@vitejs/plugin-react': 2.0.0
-      assert: 2.0.0
-      jest: 26.6.3
-      jest-specific-snapshot: 4.0.0
-      react: 17.0.2
-      react-dom: 17.0.2
-      require-from-string: 2.0.2
-      typescript: 4.7.4
-      vite: 3.0.4
-      webpack: 5.74.0
-    dependencies:
-      '@lit-labs/react': 1.0.7
-      '@sterashima78/lit-practice-wc': link:../wc
-    devDependencies:
-      '@babel/core': 7.18.9
-      '@sterashima78/lit-practice-generator-cli': link:../generator/cli
-      '@storybook/react': 7.0.0-alpha.16_skhzkrn2l67t4nuvi4va336x3u
-      '@storybook/react-webpack5': 7.0.0-alpha.16_bzfu243httafqgg7biliqjfun4
-      '@types/node': 18.6.2
-      '@types/react': 17.0.0
-      '@types/react-dom': 17.0.0
-      '@vitejs/plugin-react': 2.0.0_vite@3.0.4
-      assert: 2.0.0
-      jest: 26.6.3
-      jest-specific-snapshot: 4.0.0_jest@26.6.3
-      react: 17.0.2
-      react-dom: 17.0.2_react@17.0.2
-      require-from-string: 2.0.2
-      typescript: 4.7.4
-      vite: 3.0.4
-      webpack: 5.74.0
-
-  packages/vue26:
-    specifiers:
-      '@babel/core': 7.18.9
-      '@babel/preset-env': 7.18.9
-      '@sterashima78/lit-practice-generator-cli': '*'
-      '@sterashima78/lit-practice-wc': '*'
-      '@storybook/vue': 7.0.0-alpha.16
-      '@storybook/vue-webpack5': 7.0.0-alpha.16
-      '@vue/composition-api': 1.7.0
-      '@vue/runtime-core': 3.2.37
-      babel-loader: 8.2.5
-      css-loader: 6.7.1
-      typescript: 4.7.4
-      vite: 3.0.3
-      vite-plugin-vue2: 2.0.2
-      vue: 2.6.14
-      vue-loader: 15.9.8
-      vue-template-compiler: 2.6.14
-      vue-tsc: 0.39.2
-      webpack: 5.74.0
-    dependencies:
-      '@sterashima78/lit-practice-wc': link:../wc
-    devDependencies:
-      '@babel/core': 7.18.9
-      '@babel/preset-env': 7.18.9_@babel+core@7.18.9
-      '@sterashima78/lit-practice-generator-cli': link:../generator/cli
-      '@storybook/vue': 7.0.0-alpha.16_ei3qfhl7qscv7tmx56fosimdo4
-      '@storybook/vue-webpack5': 7.0.0-alpha.16_sioln5ntcu3unpnt3us2shjnwu
-      '@vue/composition-api': 1.7.0_vue@2.6.14
-      '@vue/runtime-core': 3.2.37
-      babel-loader: 8.2.5_y3lv6tn6yokher4u7xj4j22px4
-      css-loader: 6.7.1_webpack@5.74.0
-      typescript: 4.7.4
-      vite: 3.0.3
-      vite-plugin-vue2: 2.0.2_j2frrzyiblgqccpxtan742dazy
-      vue: 2.6.14
-      vue-loader: 15.9.8_bezci72evhi56f6uchde6cmz2a
-      vue-template-compiler: 2.6.14_nw276o374jv43s3zuuenap2suq
-      vue-tsc: 0.39.2_typescript@4.7.4
-      webpack: 5.74.0
-
-  packages/vue27:
-    specifiers:
-      '@babel/core': 7.18.9
-      '@babel/preset-env': 7.18.9
-      '@sterashima78/lit-practice-generator-cli': '*'
-      '@sterashima78/lit-practice-wc': '*'
-      '@storybook/vue': 7.0.0-alpha.16
-      '@storybook/vue-webpack5': 7.0.0-alpha.16
-      '@vitejs/plugin-vue2': 1.1.2
-      babel-loader: 8.2.5
-      css-loader: 6.7.1
-      typescript: 4.7.4
-      vite: 3.0.3
-      vue: 2.7.8
-      vue-loader: 15.10.0
-      vue-template-compiler: 2.7.8
-      vue-tsc: 0.39.2
-      webpack: 5.74.0
-    dependencies:
-      '@sterashima78/lit-practice-wc': link:../wc
-    devDependencies:
-      '@babel/core': 7.18.9
-      '@babel/preset-env': 7.18.9_@babel+core@7.18.9
-      '@sterashima78/lit-practice-generator-cli': link:../generator/cli
-      '@storybook/vue': 7.0.0-alpha.16_xw2ouhz4krgrq7l4jasytmo2n4
-      '@storybook/vue-webpack5': 7.0.0-alpha.16_uet5pthetb3bmkfbzsq2zkfvty
-      '@vitejs/plugin-vue2': 1.1.2_vite@3.0.3+vue@2.7.8
-      babel-loader: 8.2.5_y3lv6tn6yokher4u7xj4j22px4
-      css-loader: 6.7.1_webpack@5.74.0
-      typescript: 4.7.4
-      vite: 3.0.3
-      vue: 2.7.8
-      vue-loader: 15.10.0_kje6jbonrwud63vsczpj55uqta
-      vue-template-compiler: 2.7.8
-      vue-tsc: 0.39.2_typescript@4.7.4
-      webpack: 5.74.0
-
-  packages/vue3:
-    specifiers:
-      '@babel/core': 7.18.9
-      '@babel/preset-env': 7.18.9
-      '@sterashima78/lit-practice-generator-cli': '*'
-      '@sterashima78/lit-practice-wc': '*'
-      '@storybook/vue3': 7.0.0-alpha.16
-      '@storybook/vue3-webpack5': 7.0.0-alpha.16
-      '@vitejs/plugin-vue': 3.0.1
-      '@vue/compiler-sfc': 3.2.37
-      babel-loader: 8.2.5
-      typescript: 4.7.4
-      vite: 3.0.3
-      vue: 3.2.37
-      vue-tsc: 0.39.2
-      webpack: 5.74.0
-    dependencies:
-      '@sterashima78/lit-practice-wc': link:../wc
-    devDependencies:
-      '@babel/core': 7.18.9
-      '@babel/preset-env': 7.18.9_@babel+core@7.18.9
-      '@sterashima78/lit-practice-generator-cli': link:../generator/cli
-      '@storybook/vue3': 7.0.0-alpha.16_rcc7wdfrplznkqnj4fxo2anxhq
-      '@storybook/vue3-webpack5': 7.0.0-alpha.16_et2oyu25s4nqtghprrf6t4mldi
-      '@vitejs/plugin-vue': 3.0.1_vite@3.0.3+vue@3.2.37
-      '@vue/compiler-sfc': 3.2.37
-      babel-loader: 8.2.5_y3lv6tn6yokher4u7xj4j22px4
-      typescript: 4.7.4
-      vite: 3.0.3
-      vue: 3.2.37
-      vue-tsc: 0.39.2_typescript@4.7.4
-      webpack: 5.74.0
-
-  packages/wc:
-    specifiers:
-      '@babel/core': 7.18.9
-      '@custom-elements-manifest/analyzer': 0.6.3
-      '@mdx-js/react': 1.6.22
-      '@storybook/web-components-webpack5': 7.0.0-alpha.16
-      babel-loader: 8.2.5
-      lit: 2.2.8
-      lit-html: 2.2.7
-      react: 16.14.0
-      react-dom: 16.14.0
-      typescript: '*'
-      webpack: 5.74.0
-    dependencies:
-      lit: 2.2.8
-    devDependencies:
-      '@babel/core': 7.18.9
-      '@custom-elements-manifest/analyzer': 0.6.3
-      '@mdx-js/react': 1.6.22_react@16.14.0
-      '@storybook/web-components-webpack5': 7.0.0-alpha.16_gosni6jggek46egtfww7bn7mue
-      babel-loader: 8.2.5_y3lv6tn6yokher4u7xj4j22px4
-      lit-html: 2.2.7
-      react: 16.14.0
-      react-dom: 16.14.0_react@16.14.0
-      typescript: 4.7.4
-      webpack: 5.74.0
 
 packages:
 
@@ -2061,7 +2061,7 @@ packages:
     engines: {node: '>= 10.14.2'}
     dependencies:
       '@jest/types': 26.6.2
-      '@types/node': 18.6.2
+      '@types/node': 18.6.3
       chalk: 4.1.2
       jest-message-util: 26.6.2
       jest-util: 26.6.2
@@ -2077,7 +2077,7 @@ packages:
       '@jest/test-result': 26.6.2
       '@jest/transform': 26.6.2
       '@jest/types': 26.6.2
-      '@types/node': 18.6.2
+      '@types/node': 18.6.3
       ansi-escapes: 4.3.2
       chalk: 4.1.2
       exit: 0.1.2
@@ -2114,7 +2114,7 @@ packages:
     dependencies:
       '@jest/fake-timers': 26.6.2
       '@jest/types': 26.6.2
-      '@types/node': 18.6.2
+      '@types/node': 18.6.3
       jest-mock: 26.6.2
     dev: true
 
@@ -2124,7 +2124,7 @@ packages:
     dependencies:
       '@jest/types': 26.6.2
       '@sinonjs/fake-timers': 6.0.1
-      '@types/node': 18.6.2
+      '@types/node': 18.6.3
       jest-message-util: 26.6.2
       jest-mock: 26.6.2
       jest-util: 26.6.2
@@ -2238,7 +2238,7 @@ packages:
     dependencies:
       '@types/istanbul-lib-coverage': 2.0.4
       '@types/istanbul-reports': 3.0.1
-      '@types/node': 18.6.2
+      '@types/node': 18.6.3
       '@types/yargs': 15.0.14
       chalk: 4.1.2
     dev: true
@@ -4894,7 +4894,7 @@ packages:
   /@types/graceful-fs/4.1.5:
     resolution: {integrity: sha512-anKkLmZZ+xm4p8JWBf4hElkM4XR+EZeA2M9BAkkTldmcyDY4mbdIJnRghDJH3Ov5ooY7/UAoENtmdMSkaAd7Cw==}
     dependencies:
-      '@types/node': 18.6.2
+      '@types/node': 18.6.3
     dev: true
 
   /@types/hast/2.3.4:
@@ -9950,7 +9950,7 @@ packages:
       '@jest/environment': 26.6.2
       '@jest/fake-timers': 26.6.2
       '@jest/types': 26.6.2
-      '@types/node': 18.6.2
+      '@types/node': 18.6.3
       jest-mock: 26.6.2
       jest-util: 26.6.2
       jsdom: 16.7.0
@@ -9968,7 +9968,7 @@ packages:
       '@jest/environment': 26.6.2
       '@jest/fake-timers': 26.6.2
       '@jest/types': 26.6.2
-      '@types/node': 18.6.2
+      '@types/node': 18.6.3
       jest-mock: 26.6.2
       jest-util: 26.6.2
     dev: true
@@ -9984,7 +9984,7 @@ packages:
     dependencies:
       '@jest/types': 26.6.2
       '@types/graceful-fs': 4.1.5
-      '@types/node': 18.6.2
+      '@types/node': 18.6.3
       anymatch: 3.1.2
       fb-watchman: 2.0.1
       graceful-fs: 4.2.10
@@ -10010,7 +10010,7 @@ packages:
       '@jest/source-map': 26.6.2
       '@jest/test-result': 26.6.2
       '@jest/types': 26.6.2
-      '@types/node': 18.6.2
+      '@types/node': 18.6.3
       chalk: 4.1.2
       co: 4.6.0
       expect: 26.6.2
@@ -10069,7 +10069,7 @@ packages:
     engines: {node: '>= 10.14.2'}
     dependencies:
       '@jest/types': 26.6.2
-      '@types/node': 18.6.2
+      '@types/node': 18.6.3
     dev: true
 
   /jest-pnp-resolver/1.2.2_jest-resolve@26.6.2:
@@ -10122,7 +10122,7 @@ packages:
       '@jest/environment': 26.6.2
       '@jest/test-result': 26.6.2
       '@jest/types': 26.6.2
-      '@types/node': 18.6.2
+      '@types/node': 18.6.3
       chalk: 4.1.2
       emittery: 0.7.2
       exit: 0.1.2
@@ -10190,7 +10190,7 @@ packages:
     resolution: {integrity: sha512-S5wqyz0DXnNJPd/xfIzZ5Xnp1HrJWBczg8mMfMpN78OJ5eDxXyf+Ygld9wX1DnUWbIbhM1YDY95NjR4CBXkb2g==}
     engines: {node: '>= 10.14.2'}
     dependencies:
-      '@types/node': 18.6.2
+      '@types/node': 18.6.3
       graceful-fs: 4.2.10
     dev: true
 
@@ -10234,7 +10234,7 @@ packages:
     engines: {node: '>= 10.14.2'}
     dependencies:
       '@jest/types': 26.6.2
-      '@types/node': 18.6.2
+      '@types/node': 18.6.3
       chalk: 4.1.2
       graceful-fs: 4.2.10
       is-ci: 2.0.0
@@ -10259,7 +10259,7 @@ packages:
     dependencies:
       '@jest/test-result': 26.6.2
       '@jest/types': 26.6.2
-      '@types/node': 18.6.2
+      '@types/node': 18.6.3
       ansi-escapes: 4.3.2
       chalk: 4.1.2
       jest-util: 26.6.2
@@ -10270,7 +10270,7 @@ packages:
     resolution: {integrity: sha512-KWYVV1c4i+jbMpaBC+U++4Va0cp8OisU185o73T1vo99hqi7w8tSJfUXYswwqqrjzwxa6KpRK54WhPvwf5w6PQ==}
     engines: {node: '>= 10.13.0'}
     dependencies:
-      '@types/node': 18.6.2
+      '@types/node': 18.6.3
       merge-stream: 2.0.0
       supports-color: 7.2.0
     dev: true
@@ -15041,6 +15041,9 @@ packages:
 
   /vue-template-compiler/2.6.14_nw276o374jv43s3zuuenap2suq:
     resolution: {integrity: sha512-ODQS1SyMbjKoO1JBJZojSw6FE4qnh9rIpUZn2EUT86FKizx9uH5z6uXiIrm4/Nb/gwxTi/o17ZDEGWAXHvtC7g==}
+    dependencies:
+      de-indent: 1.0.2
+      he: 1.2.0
     dev: true
     patched: true
 

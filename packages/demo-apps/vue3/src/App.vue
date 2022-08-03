@@ -18,16 +18,19 @@ const log = (a: unknown) => console.log(a);
       <a href="https://vuejs.org/" target="_blank">
         <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
       </a>
+      <p class="subtitle">hogehoge</p>
     </template>
     <VMyCard>
       <template #header>
         <p>Header</p>
       </template>
       <button @click="log('click')">log</button>
-      <p>Content</p>
-      <p>Content</p>
-      <p>Content</p>
-      <p>Content</p>
+      <div class="contents">
+        <p>Content</p>
+        <p>Content</p>
+        <p>Content</p>
+        <p>Content</p>
+      </div>
     </VMyCard>
   </VMyAccordion>
 </template>
@@ -43,5 +46,13 @@ const log = (a: unknown) => console.log(a);
 }
 .logo.vue:hover {
   filter: drop-shadow(0 0 2em #42b883aa);
+}
+
+.subtitle {
+  font-weight: bold;
+}
+
+.contents > p {
+  font-size: 1.5rem;
 }
 </style>

@@ -12,8 +12,7 @@ export default defineComponent({
   emits: {},
   setup(props, { emit }) {
     const slots = useSlots();
-    const vm = getCurrentInstance();
-    const h = _h.bind(vm);
+    const h = _h.bind(getCurrentInstance());
     return () =>
       h(
         "my-card",
@@ -21,15 +20,17 @@ export default defineComponent({
           domProps: {},
           on: {},
         },
+
         [
           slots["default"] === undefined
             ? undefined
             : h(
-                "span",
+                "div",
                 {
                   style: {
                     display: "contents",
                   },
+
                   attrs: {},
                 },
                 [slots.default()]
@@ -37,11 +38,12 @@ export default defineComponent({
           slots["header"] === undefined
             ? undefined
             : h(
-                "span",
+                "div",
                 {
                   style: {
                     display: "contents",
                   },
+
                   attrs: {
                     slot: "header",
                   },
