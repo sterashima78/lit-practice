@@ -1,4 +1,4 @@
-import { MyAccordion, MyCard } from "@sterashima78/lit-practice-react";
+import { MyAccordion, MyCard, MyTab, MyTabGroup, MyTabPanel } from "@sterashima78/lit-practice-react";
 import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import "./App.css";
@@ -19,48 +19,59 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <label>
-        <input type="checkbox" onChange={() => setIsOpen(!isOpen)} checked={isOpen} />
-        Toggle Accordion
-      </label>
+      <MyTabGroup>
+        <MyTab name="setting">Setting</MyTab>
+        <MyTab name="contents">Contens</MyTab>
+        <MyTabPanel name="setting">
+          <label>
+            <input type="checkbox" onChange={() => setIsOpen(!isOpen)} checked={isOpen} />
+            Toggle Accordion
+          </label>
 
-      <label>
-        <input
-          type="checkbox"
-          onChange={() => setIsUsingToggleLogger(!isUsingToggleLogger)}
-          checked={isUsingToggleLogger}
-        />
-        with Toggle Logger
-      </label>
+          <label>
+            <input
+              type="checkbox"
+              onChange={() => setIsUsingToggleLogger(!isUsingToggleLogger)}
+              checked={isUsingToggleLogger}
+            />
+            with Toggle Logger
+          </label>
 
-      <label>
-        <input type="checkbox" onChange={() => setIsUsingOpenLogger(!isUsingOpenLogger)} checked={isUsingOpenLogger} />
-        with Open Logger
-      </label>
-
-      <MyAccordion
-        isOpen={isOpen}
-        onToggle={isUsingToggleLogger
-          ? ({ isOpen }) => {
-            setIsOpen(isOpen);
-            console.log(`set isOpen=${isOpen}`);
-          }
-          : ({ isOpen }) => setIsOpen(isOpen)}
-        onOpen={isUsingOpenLogger
-          ? () => {
-            console.log("open");
-          }
-          : () => ""}
-      >
-        <h1 slot="header">Vite + React</h1>
-        <p slot="header" className="subtitle">multiple slot</p>
-        <MyCard>
-          <p slot="header">Counter</p>
-          <button onClick={() => setCount((count) => count + 1)}>
-            count is {count}
-          </button>
-        </MyCard>
-      </MyAccordion>
+          <label>
+            <input
+              type="checkbox"
+              onChange={() => setIsUsingOpenLogger(!isUsingOpenLogger)}
+              checked={isUsingOpenLogger}
+            />
+            with Open Logger
+          </label>
+        </MyTabPanel>
+        <MyTabPanel name="contents">
+          <MyAccordion
+            isOpen={isOpen}
+            onToggle={isUsingToggleLogger
+              ? ({ isOpen }) => {
+                setIsOpen(isOpen);
+                console.log(`set isOpen=${isOpen}`);
+              }
+              : ({ isOpen }) => setIsOpen(isOpen)}
+            onOpen={isUsingOpenLogger
+              ? () => {
+                console.log("open");
+              }
+              : () => ""}
+          >
+            <h1 slot="header">Vite + React</h1>
+            <p slot="header" className="subtitle">multiple slot</p>
+            <MyCard>
+              <p slot="header">Counter</p>
+              <button onClick={() => setCount((count) => count + 1)}>
+                count is {count}
+              </button>
+            </MyCard>
+          </MyAccordion>
+        </MyTabPanel>
+      </MyTabGroup>
     </div>
   );
 }
