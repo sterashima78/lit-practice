@@ -1,38 +1,52 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import { VMyAccordion, VMyCard } from "@sterashima78/lit-practice-vue3";
+import {
+  VMyAccordion,
+  VMyCard,
+  VMyTabGroup,
+  VMyTab,
+  VMyTabPanel,
+} from "@sterashima78/lit-practice-vue3";
 const isOpen = ref(true);
 const log = (a: unknown) => console.log(a);
 </script>
 
 <template>
-  <label>Toggle <input type="checkbox" v-model="isOpen" /></label>
-  <VMyAccordion
-    :isOpen="isOpen"
-    @toggle="({ isOpen: open }) => (isOpen = open)"
-  >
-    <template #header>
-      <a href="https://vitejs.dev" target="_blank">
-        <img src="/vite.svg" class="logo" alt="Vite logo" />
-      </a>
-      <a href="https://vuejs.org/" target="_blank">
-        <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-      </a>
-      <p class="subtitle">hogehoge</p>
-    </template>
-    <VMyCard>
-      <template #header>
-        <p>Header</p>
-      </template>
-      <button @click="log('click')">log</button>
-      <div class="contents">
-        <p>Content</p>
-        <p>Content</p>
-        <p>Content</p>
-        <p>Content</p>
-      </div>
-    </VMyCard>
-  </VMyAccordion>
+  <VMyTabGroup>
+    <VMyTab name="setting">Setting</VMyTab>
+    <VMyTab name="contents">Contents</VMyTab>
+    <VMyTabPanel name="setting">
+      <label>Toggle <input type="checkbox" v-model="isOpen" /></label>
+    </VMyTabPanel>
+    <VMyTabPanel name="contents">
+      <VMyAccordion
+        :isOpen="isOpen"
+        @toggle="({ isOpen: open }) => (isOpen = open)"
+      >
+        <template #header>
+          <a href="https://vitejs.dev" target="_blank">
+            <img src="/vite.svg" class="logo" alt="Vite logo" />
+          </a>
+          <a href="https://vuejs.org/" target="_blank">
+            <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
+          </a>
+          <p class="subtitle">hogehoge</p>
+        </template>
+        <VMyCard>
+          <template #header>
+            <p>Header</p>
+          </template>
+          <button @click="log('click')">log</button>
+          <div class="contents">
+            <p>Content</p>
+            <p>Content</p>
+            <p>Content</p>
+            <p>Content</p>
+          </div>
+        </VMyCard>
+      </VMyAccordion>
+    </VMyTabPanel>
+  </VMyTabGroup>
 </template>
 
 <style scoped>

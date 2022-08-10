@@ -14,11 +14,7 @@ export class MyTab extends LitElement {
   @property({ type: String, attribute: "name" })
   name = "";
 
-  select = () => {
-    this.dispatchEvent(new CustomEvent("select", { detail: this.name }));
-  };
-
-  override render = () => html`<button @click="${this.select}"><slot></slot></button>`;
+  override render = () => html`<button><slot></slot></button>`;
 }
 
 declare global {
