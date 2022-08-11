@@ -29,25 +29,25 @@ export class MyCard extends LitElement {
     .card__textbox{
         width: 100%;
         height: auto;
-        padding: 20px 18px;
-        background: #ffffff;
+        padding: calc(var(--spacing-md) * 1px);
+        background: var(--colors-white);
         box-sizing: border-box;
     }
     .card__textbox > * + *{
-        margin-top: 10px;
+        margin-top: calc(var(--spacing-sm) * 1px);
     }
     .card__titletext{
-        font-size: 20px;
-        font-weight: bold;
-        line-height: 125%;
+        font-size: var(--font-sizes-h2);
+        font-weight: var(--font-weights-heading-bold);
+        line-height: var(--line-heights-heading);
     }
     .card__overviewtext{
-        font-size: 12px;
-        line-height: 150%;
+        font-size: calc(var(--font-sizes-sm) * 1px);
+        line-height: calc(var(--line-heights-body) * 1px);
     }
     .card-skin{
         overflow: hidden;
-        border-radius: 8px;
+        border-radius: calc(var(--border-radius-lg) * 1px);
         box-shadow: 0 4px 15px rgba(0,0,0,.2);
     }
   `;

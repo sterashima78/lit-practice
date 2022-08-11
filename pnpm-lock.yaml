@@ -44,6 +44,7 @@ importers:
       '@babel/core': 7.18.9
       '@lit-labs/react': 1.0.7
       '@sterashima78/lit-practice-generator-cli': '*'
+      '@sterashima78/lit-practice-token': '*'
       '@sterashima78/lit-practice-wc': '*'
       '@storybook/react': 7.0.0-alpha.18
       '@storybook/react-webpack5': 7.0.0-alpha.18
@@ -66,6 +67,7 @@ importers:
     devDependencies:
       '@babel/core': 7.18.9
       '@sterashima78/lit-practice-generator-cli': link:../../generator/cli
+      '@sterashima78/lit-practice-token': link:../../token
       '@storybook/react': 7.0.0-alpha.18_skhzkrn2l67t4nuvi4va336x3u
       '@storybook/react-webpack5': 7.0.0-alpha.18_bzfu243httafqgg7biliqjfun4
       '@types/node': 18.6.2
@@ -87,6 +89,7 @@ importers:
       '@babel/core': 7.18.9
       '@babel/preset-env': 7.18.9
       '@sterashima78/lit-practice-generator-cli': '*'
+      '@sterashima78/lit-practice-token': '*'
       '@sterashima78/lit-practice-wc': '*'
       '@storybook/vue': 7.0.0-alpha.18
       '@storybook/vue-webpack5': 7.0.0-alpha.18
@@ -108,6 +111,7 @@ importers:
       '@babel/core': 7.18.9
       '@babel/preset-env': 7.18.9_@babel+core@7.18.9
       '@sterashima78/lit-practice-generator-cli': link:../../generator/cli
+      '@sterashima78/lit-practice-token': link:../../token
       '@storybook/vue': 7.0.0-alpha.18_ei3qfhl7qscv7tmx56fosimdo4
       '@storybook/vue-webpack5': 7.0.0-alpha.18_sioln5ntcu3unpnt3us2shjnwu
       '@vue/composition-api': 1.7.0_vue@2.6.14
@@ -128,6 +132,7 @@ importers:
       '@babel/core': 7.18.9
       '@babel/preset-env': 7.18.9
       '@sterashima78/lit-practice-generator-cli': '*'
+      '@sterashima78/lit-practice-token': '*'
       '@sterashima78/lit-practice-wc': '*'
       '@storybook/vue': 7.0.0-alpha.18
       '@storybook/vue-webpack5': 7.0.0-alpha.18
@@ -147,6 +152,7 @@ importers:
       '@babel/core': 7.18.9
       '@babel/preset-env': 7.18.9_@babel+core@7.18.9
       '@sterashima78/lit-practice-generator-cli': link:../../generator/cli
+      '@sterashima78/lit-practice-token': link:../../token
       '@storybook/vue': 7.0.0-alpha.18_xw2ouhz4krgrq7l4jasytmo2n4
       '@storybook/vue-webpack5': 7.0.0-alpha.18_uet5pthetb3bmkfbzsq2zkfvty
       '@vitejs/plugin-vue2': 1.1.2_vite@3.0.3+vue@2.7.8
@@ -165,6 +171,7 @@ importers:
       '@babel/core': 7.18.9
       '@babel/preset-env': 7.18.9
       '@sterashima78/lit-practice-generator-cli': '*'
+      '@sterashima78/lit-practice-token': '*'
       '@sterashima78/lit-practice-wc': '*'
       '@storybook/vue3': 7.0.0-alpha.18
       '@storybook/vue3-webpack5': 7.0.0-alpha.18
@@ -182,6 +189,7 @@ importers:
       '@babel/core': 7.18.9
       '@babel/preset-env': 7.18.9_@babel+core@7.18.9
       '@sterashima78/lit-practice-generator-cli': link:../../generator/cli
+      '@sterashima78/lit-practice-token': link:../../token
       '@storybook/vue3': 7.0.0-alpha.18_rcc7wdfrplznkqnj4fxo2anxhq
       '@storybook/vue3-webpack5': 7.0.0-alpha.18_et2oyu25s4nqtghprrf6t4mldi
       '@vitejs/plugin-vue': 3.0.1_vite@3.0.3+vue@3.2.37
@@ -198,6 +206,7 @@ importers:
       '@babel/core': 7.18.9
       '@custom-elements-manifest/analyzer': 0.6.3
       '@mdx-js/react': 1.6.22
+      '@sterashima78/lit-practice-token': '*'
       '@storybook/web-components': 7.0.0-alpha.18
       '@storybook/web-components-webpack5': 7.0.0-alpha.18
       babel-loader: 8.2.5
@@ -213,6 +222,7 @@ importers:
       '@babel/core': 7.18.9
       '@custom-elements-manifest/analyzer': 0.6.3
       '@mdx-js/react': 1.6.22_react@16.14.0
+      '@sterashima78/lit-practice-token': link:../../token
       '@storybook/web-components': 7.0.0-alpha.18_eer2fumoyvsdwnz5a6avu334zu
       '@storybook/web-components-webpack5': 7.0.0-alpha.18_gosni6jggek46egtfww7bn7mue
       babel-loader: 8.2.5_y3lv6tn6yokher4u7xj4j22px4
@@ -225,6 +235,7 @@ importers:
   packages/demo-apps/react:
     specifiers:
       '@sterashima78/lit-practice-react': '*'
+      '@sterashima78/lit-practice-token': '*'
       '@types/react': ^18.0.15
       '@types/react-dom': ^18.0.6
       '@vitejs/plugin-react': ^2.0.0
@@ -234,6 +245,7 @@ importers:
       vite: ^3.0.0
     dependencies:
       '@sterashima78/lit-practice-react': link:../../components/react
+      '@sterashima78/lit-practice-token': link:../../token
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
     devDependencies:
@@ -245,6 +257,7 @@ importers:
 
   packages/demo-apps/vue26:
     specifiers:
+      '@sterashima78/lit-practice-token': '*'
       '@sterashima78/lit-practice-vue26': '*'
       '@vue/composition-api': 1.7.0
       '@vue/runtime-dom': 3.2.37
@@ -255,6 +268,7 @@ importers:
       vue-template-compiler: 2.6.14
       vue-tsc: ^0.38.4
     dependencies:
+      '@sterashima78/lit-practice-token': link:../../token
       '@sterashima78/lit-practice-vue26': link:../../components/vue26
       '@vue/composition-api': 1.7.0_vue@2.6.14
       vue: 2.6.14
@@ -268,6 +282,7 @@ importers:
 
   packages/demo-apps/vue27:
     specifiers:
+      '@sterashima78/lit-practice-token': '*'
       '@sterashima78/lit-practice-vue27': '*'
       '@vitejs/plugin-vue2': 1.1.2
       typescript: 4.7.4
@@ -275,6 +290,7 @@ importers:
       vue: 2.7.8
       vue-tsc: ^0.38.4
     dependencies:
+      '@sterashima78/lit-practice-token': link:../../token
       '@sterashima78/lit-practice-vue27': link:../../components/vue27
       vue: 2.7.8
     devDependencies:
@@ -285,6 +301,7 @@ importers:
 
   packages/demo-apps/vue3:
     specifiers:
+      '@sterashima78/lit-practice-token': '*'
       '@sterashima78/lit-practice-vue3': '*'
       '@vitejs/plugin-vue': ^3.0.0
       typescript: ^4.6.4
@@ -292,6 +309,7 @@ importers:
       vue: ^3.2.37
       vue-tsc: ^0.38.4
     dependencies:
+      '@sterashima78/lit-practice-token': link:../../token
       '@sterashima78/lit-practice-vue3': link:../../components/vue3
       vue: 3.2.37
     devDependencies:
@@ -334,6 +352,12 @@ importers:
       '@sterashima78/lit-practice-generator-common': '*'
     dependencies:
       '@sterashima78/lit-practice-generator-common': link:../common
+
+  packages/token:
+    specifiers:
+      style-dictionary: 3.7.1
+    devDependencies:
+      style-dictionary: 3.7.1
 
 packages:
 
@@ -6459,6 +6483,14 @@ packages:
     resolution: {integrity: sha512-pJYArGHrPp3TUqQzFYRmP/lwJlj8RCbVe3Gd3eJQkAV8SAC6b19XS9BjMvRdvaS8RMkaTN8ZhoHP6S1y8zzwEQ==}
     dev: true
 
+  /capital-case/1.0.4:
+    resolution: {integrity: sha512-ds37W8CytHgwnhGGTi88pcPyR15qoNkOpYwmMMfnWqqWgESapLqvDx6huFjQ5vqWSn2Z06173XNA7LtMOeUh1A==}
+    dependencies:
+      no-case: 3.0.4
+      tslib: 2.4.0
+      upper-case-first: 2.0.2
+    dev: true
+
   /capture-exit/2.0.0:
     resolution: {integrity: sha512-PiT/hQmTonHhl/HFGN+Lx3JJUznrVYJ3+AQsnthneZbvW7x+f08Tk7yLJTLEOUvBTbduLeeBkxEaYXUOUrRq6g==}
     engines: {node: 6.* || 8.* || >= 10.*}
@@ -6494,6 +6526,23 @@ packages:
     dependencies:
       ansi-styles: 4.3.0
       supports-color: 7.2.0
+    dev: true
+
+  /change-case/4.1.2:
+    resolution: {integrity: sha512-bSxY2ws9OtviILG1EiY5K7NNxkqg/JnRnFxLtKQ96JaviiIxi7djMrSd0ECT9AC+lttClmYwKw53BWpOMblo7A==}
+    dependencies:
+      camel-case: 4.1.2
+      capital-case: 1.0.4
+      constant-case: 3.0.4
+      dot-case: 3.0.4
+      header-case: 2.0.4
+      no-case: 3.0.4
+      param-case: 3.0.4
+      pascal-case: 3.1.2
+      path-case: 3.0.4
+      sentence-case: 3.0.4
+      snake-case: 3.0.4
+      tslib: 2.4.0
     dev: true
 
   /char-regex/1.0.2:
@@ -7170,6 +7219,14 @@ packages:
         optional: true
     dependencies:
       bluebird: 3.7.2
+    dev: true
+
+  /constant-case/3.0.4:
+    resolution: {integrity: sha512-I2hSBi7Vvs7BEuJDr5dDHfzb/Ruj3FyvFyh7KLilAjNQw3Be+xgqUBA2W6scVEcL0hL1dwPRtIqEPVUCKkSsyQ==}
+    dependencies:
+      no-case: 3.0.4
+      tslib: 2.4.0
+      upper-case: 2.0.2
     dev: true
 
   /constantinople/4.0.1:
@@ -9025,6 +9082,13 @@ packages:
     hasBin: true
     dev: true
 
+  /header-case/2.0.4:
+    resolution: {integrity: sha512-H/vuk5TEEVZwrR0lp2zed9OCo1uAILMlx0JEMgC26rzyJJ3N1v6XkwHHXJQdR2doSjcGPM6OKPYoJgf0plJ11Q==}
+    dependencies:
+      capital-case: 1.0.4
+      tslib: 2.4.0
+    dev: true
+
   /hosted-git-info/2.8.9:
     resolution: {integrity: sha512-mxIDAb9Lsm6DoOJ7xH+5+X4y1LU/4Hi50L9C5sIswK3JzULS4bwk1FvjdBgvYR4bzT4tuUQiC15FE2f5HbLvYw==}
     dev: true
@@ -10438,6 +10502,10 @@ packages:
     resolution: {integrity: sha512-1hqLFMSrGHRHxav9q9gNjJ5EXznIxGVO09xQRrwplcS8qs28pZ8s8hupZAmqDwZUmVZ2Qb2jnyPOWcDH8m8dlA==}
     engines: {node: '>=6'}
     hasBin: true
+    dev: true
+
+  /jsonc-parser/3.1.0:
+    resolution: {integrity: sha512-DRf0QjnNeCUds3xTjKlQQ3DpJD51GvDjJfnxUVWg6PZTo2otSm+slzNAxU/35hF8/oJIKoG9slq30JYOsF2azg==}
     dev: true
 
   /jsonfile/6.1.0:
@@ -11878,6 +11946,13 @@ packages:
     resolution: {integrity: sha512-b7uo2UCUOYZcnF/3ID0lulOJi/bafxa1xPe7ZPsammBSpjSWQkjNxlt635YGS2MiR9GjvuXCtz2emr3jbsz98g==}
     dev: true
 
+  /path-case/3.0.4:
+    resolution: {integrity: sha512-qO4qCFjXqVTrcbPt/hQfhTQ+VhFsqNKOPtytgNKkKxSoEp3XPUQ8ObFuePylOIok5gjn69ry8XiULxCwot3Wfg==}
+    dependencies:
+      dot-case: 3.0.4
+      tslib: 2.4.0
+    dev: true
+
   /path-exists/3.0.0:
     resolution: {integrity: sha512-bpC7GYwiDYQ4wYLe+FA8lhRjhQCMcQGuSgGGqDkg/QerRWw9CmGRT0iSOVRSZJ29NMLZgIzqaljJ63oaL4NIJQ==}
     engines: {node: '>=4'}
@@ -13121,6 +13196,14 @@ packages:
       - supports-color
     dev: true
 
+  /sentence-case/3.0.4:
+    resolution: {integrity: sha512-8LS0JInaQMCRoQ7YUytAo/xUu5W2XnQxV2HI/6uM6U7CITS1RqPElr30V6uIqyMKM9lJGRVFy5/4CuzcixNYSg==}
+    dependencies:
+      no-case: 3.0.4
+      tslib: 2.4.0
+      upper-case-first: 2.0.2
+    dev: true
+
   /serialize-javascript/6.0.0:
     resolution: {integrity: sha512-Qr3TosvguFt8ePWqsvRfrKyQXIiW+nGbYpy8XK24NQHE83caxWt+mIymTT19DGFbNWNLfEwsrkSmN64lVWB9ag==}
     dependencies:
@@ -13255,6 +13338,13 @@ packages:
       ansi-styles: 4.3.0
       astral-regex: 2.0.0
       is-fullwidth-code-point: 3.0.0
+    dev: true
+
+  /snake-case/3.0.4:
+    resolution: {integrity: sha512-LAOh4z89bGQvl9pFfNF8V146i7o7/CqFPbqzYgP+yYzDIDeS9HaNFtXABamRW+AQzEVODcvE79ljJ+8a9YSdMg==}
+    dependencies:
+      dot-case: 3.0.4
+      tslib: 2.4.0
     dev: true
 
   /snapdragon-node/2.1.1:
@@ -13548,6 +13638,22 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
+  /style-dictionary/3.7.1:
+    resolution: {integrity: sha512-yYU9Z/J8Znj9T9oJVjo8VOYamrOxv0UbBKPjhSt+PharxrhyQCM4RWb71fgEfv2pK9KO8G83/0ChDNQZ1mn0wQ==}
+    engines: {node: '>=12.0.0'}
+    hasBin: true
+    dependencies:
+      chalk: 4.1.2
+      change-case: 4.1.2
+      commander: 8.3.0
+      fs-extra: 10.1.0
+      glob: 7.2.3
+      json5: 2.2.1
+      jsonc-parser: 3.1.0
+      lodash: 4.17.21
+      tinycolor2: 1.4.2
+    dev: true
+
   /style-loader/3.3.1_webpack@5.74.0:
     resolution: {integrity: sha512-GPcQ+LDJbrcxHORTRes6Jy2sfvK2kS6hpSfI/fXhPt+spVzxF6LJ1dHLN9zIGmVaaP044YKaIatFaufENRiDoQ==}
     engines: {node: '>= 12.13.0'}
@@ -13697,6 +13803,10 @@ packages:
 
   /through/2.3.8:
     resolution: {integrity: sha512-w89qg7PI8wAdvX60bMDP+bFoD5Dvhm9oLheFp5O4a2QF0cSBGsBX4qZmadPMvVqlLJBBci+WqGGOAPvcDeNSVg==}
+    dev: true
+
+  /tinycolor2/1.4.2:
+    resolution: {integrity: sha512-vJhccZPs965sV/L2sU4oRQVAos0pQXwsvTLkWYdqJ+a8Q5kPFzJTuOFwy7UniPli44NKQGAglksjvOcpo95aZA==}
     dev: true
 
   /tmpl/1.0.5:
@@ -14281,6 +14391,18 @@ packages:
       semver: 7.3.7
       semver-diff: 3.1.1
       xdg-basedir: 4.0.0
+    dev: true
+
+  /upper-case-first/2.0.2:
+    resolution: {integrity: sha512-514ppYHBaKwfJRK/pNC6c/OxfGa0obSnAl106u97Ed0I625Nin96KAjttZF6ZL3e1XLtphxnqrOi9iWgm+u+bg==}
+    dependencies:
+      tslib: 2.4.0
+    dev: true
+
+  /upper-case/2.0.2:
+    resolution: {integrity: sha512-KgdgDGJt2TpuwBUIjgG6lzw2GWFRCW9Qkfkiv0DxqHHLYJHmtmdUIKcZd8rHgFSjopVTlw6ggzCm1b8MFQwikg==}
+    dependencies:
+      tslib: 2.4.0
     dev: true
 
   /uri-js/4.4.1:

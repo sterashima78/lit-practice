@@ -50,10 +50,14 @@
   "dependencies": {
     "lit": "2.2.8"
   },
+  "peerDependencies": {
+    "@sterashima78/lit-practice-token": "*"
+  },
   "devDependencies": {
     "@custom-elements-manifest/analyzer": "0.6.3",
     "@storybook/web-components-webpack5": "7.0.0-alpha.18",
     "@storybook/web-components": "7.0.0-alpha.18",
+    "@sterashima78/lit-practice-token": "*",
     "@babel/core": "7.18.9",
     "babel-loader": "8.2.5",
     "@mdx-js/react": "1.6.22",

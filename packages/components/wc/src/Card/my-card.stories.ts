@@ -11,9 +11,15 @@ export const Test: StoryObj = {
   args: {
     title: "",
     body: "body",
+    spacingSize: 4,
   },
   render: (args) =>
     html`
+        <style>
+          :root {
+            --spacing-xs: ${args.spacingSize}
+          }
+        </style>
         <my-card>
             <p slot="header">${args.title}</p>
             <div>
