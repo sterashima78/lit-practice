@@ -1,0 +1,19 @@
+{
+  "name": "@sterashima78/lit-practice-token",
+  "version": "1.0.0",
+  "description": "",
+  "main": "libs/js/colors.js",
+  "types": "libs/js/colors.d.ts",
+  "files": [
+    "libs"
+  ],
+  "scripts": {
+    "build": "style-dictionary build"
+  },
+  "devDependencies": {
+    "style-dictionary": "3.7.1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

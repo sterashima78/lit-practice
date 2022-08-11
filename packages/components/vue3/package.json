@@ -33,6 +33,7 @@
     "@storybook/vue3-webpack5": "7.0.0-alpha.18",
     "@storybook/vue3": "7.0.0-alpha.18",
     "@sterashima78/lit-practice-generator-cli": "*",
+    "@sterashima78/lit-practice-token": "*",
     "webpack": "5.74.0",
     "@babel/core": "7.18.9",
     "@babel/preset-env": "7.18.9",

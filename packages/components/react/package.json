@@ -36,6 +36,7 @@
     "@storybook/react-webpack5": "7.0.0-alpha.18",
     "@storybook/react": "7.0.0-alpha.18",
     "@sterashima78/lit-practice-generator-cli": "*",
+    "@sterashima78/lit-practice-token": "*",
     "webpack": "5.74.0",
     "@babel/core": "7.18.9",
     "jest-specific-snapshot": "4.0.0",

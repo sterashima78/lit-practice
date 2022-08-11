@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "vue": "2.7.8",
+    "@sterashima78/lit-practice-token": "*",
     "@sterashima78/lit-practice-vue27": "*"
   },
   "devDependencies": {
