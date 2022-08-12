@@ -1,4 +1,5 @@
 import { Meta, StoryObj } from "@storybook/react";
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import * as React from "react";
 import { MyCard } from "./generated/MyCard";
 const meta: Meta = {

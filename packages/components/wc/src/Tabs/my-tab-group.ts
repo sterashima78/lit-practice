@@ -31,7 +31,6 @@ export class MyTabGroup extends LitElement {
   };
 
   override connectedCallback(): void {
-    super.connectedCallback();
     this.init();
   }
 
@@ -42,7 +41,7 @@ export class MyTabGroup extends LitElement {
   };
 
   override render = () =>
-    html`<div class="wrapper" @click="${this.clickHandler}"><slot @slotchange=${this.init}></slot></div>`;
+    html`<div class="wrapper" @click="${this.clickHandler}" @keyPress="${this.clickHandler}"><slot @slotchange=${this.init}></slot></div>`;
 }
 
 declare global {

@@ -25,7 +25,7 @@ const addEventListener = (e: Event) => {
   let ${kabobToOnEvent(e.name)}Handler: (e: ${e.type.text}) => void 
   if(!!${kabobToOnEvent(e.name)}) {
     ${kabobToOnEvent(e.name)}Handler = (e: ${e.type.text}) => ${kabobToOnEvent(e.name)}(e.detail)
-    //@ts-expect-error
+    // @ts-expect-error カスタムイベント定義が存在しない
     ref.current?.addEventListener("${e.name}", ${kabobToOnEvent(e.name)}Handler)
   }
   `;
@@ -36,7 +36,7 @@ const removeEventListener = (e: Event) => {
     return `if(!!${kabobToOnEvent(e.name)}) ref.current?.removeEventListener("${e.name}", ${kabobToOnEvent(e.name)})`;
   }
   return `
-  // @ts-expect-error
+  // @ts-expect-error カスタムイベント定義が存在しない
   if(!!${kabobToOnEvent(e.name)}Handler) ref.current?.removeEventListener("${e.name}", ${
     kabobToOnEvent(e.name)
   }Handler)`;
@@ -56,7 +56,6 @@ const toPropEffect = (attr: Attribute) => /*javascript*/ `
   // for ${attr.name} attribute
   useEffect(()=> {
     if(ref.current)
-      // @ts-ignore
       ref.current.${attr.fieldName} = ${attr.fieldName}
   }, [${attr.fieldName}])
 `;
@@ -81,15 +80,20 @@ const toProps = (events: Event[], attrs: Attribute[], slots: Slot[]) => {
 
 export const toProgram: ToProgram = (p) => {
   const code = /*javascript*/ `
-    import { ReactNode, useEffect, useRef } from "react"
+    import { ReactNode,${
+    (p.events && p.events.length > 0) || (p.attributes && p.attributes?.length > 0)
+      ? "useEffect,"
+      : ""
+  } useRef } from "react"
     import "@sterashima78/lit-practice-wc/${p.tagName}.js"
+    import type * as Types from "@sterashima78/lit-practice-wc"
     ${toPropTypes(p.name, p.events || [], p.attributes || [], p.slots || [])}
     export const ${p.name} = (props: ${p.name}Props): JSX.Element => {
-        const ref = useRef<HTMLElement>()
+        const ref = useRef<Types.${p.name}>()
         ${toProps(p.events || [], p.attributes || [], p.slots || [])}
         ${(p.attributes || []).map(toPropEffect).join("\n")}
         ${(p.events || []).map(toEventEffect).join("\n")}
-        // @ts-ignore
+        ${"// @ts-expect-error カスタムエレメントに JSX の定義がない"}
         return <${p.tagName} ref={ref}>${p.slots && p.slots.length > 0 ? "{ children }" : ""}</${p.tagName}>
     }`;
   return [

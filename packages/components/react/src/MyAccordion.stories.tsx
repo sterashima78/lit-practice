@@ -1,4 +1,5 @@
 import { Meta, StoryObj } from "@storybook/react";
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import * as React from "react";
 import { MyAccordion } from "./generated/MyAccordion";
 const meta: Meta = {
@@ -12,8 +13,8 @@ export const Test: StoryObj = {
     <MyAccordion
       isOpen={args.isOpen}
       onToggle={(e) => console.log("toggle", e)}
-      onOpen={(e) => console.log("open", e)}
-      onClose={(e) => console.log("close", e)}
+      onOpen={() => console.log("open")}
+      onClose={() => console.log("close")}
     >
       <p slot="header">Header</p>
       <button onClick={() => console.log("click")}>log</button>

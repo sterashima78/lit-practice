@@ -9,10 +9,14 @@ import {
 export default defineComponent({
   name: "VMyTabPanel",
   props: {
-    name: { type: String, required: false },
+    name: {
+      type: String,
+      required: false,
+      default: "",
+    },
   },
   emits: {},
-  setup(props, { emit }) {
+  setup(props) {
     const slots = useSlots();
     const h = _h.bind(getCurrentInstance());
     return () =>

@@ -5,23 +5,11 @@ type Filename = string;
 export type ToProgram = (def: CustomElement) => [Filename, Program];
 export type ToEntry = (defs: CustomElement[]) => Program;
 
-/**
- * Converts string to initial cap.
- */
-export const toInitialCap = (str: string) =>
-  // @ts-expect-error
-  str ? `${str[0].toUpperCase()}${str.slice(1)}` : str;
+export const toInitialCap = (str: string) => str[0] ? `${str[0].toUpperCase()}${str.slice(1)}` : str;
 
-/**
- * Converts kabob-case string to PascalCase.
- */
 export const kabobToPascalCase = (str: string) =>
-  // @ts-expect-error
-  toInitialCap(str).replace(/-[a-z]/g, (m) => m[1].toUpperCase());
+  toInitialCap(str).replace(/-[a-z]/g, (m) => m[1] ? m[1].toUpperCase() : m);
 
-/**
- * Converts kabob-case event name to an "on" event: `onEventName`.
- */
 export const kabobToOnEvent = (str: string) => `on${kabobToPascalCase(str)}`;
 
 export const isVoidEvent = (type: string): boolean => {
@@ -31,6 +19,7 @@ export const isVoidEvent = (type: string): boolean => {
 
 export const toEventType = (type: string): string => {
   if (isVoidEvent(type)) return "";
-  const match = type.match(/CustomEvent<(.+)>/)!;
+  const match = type.match(/CustomEvent<(.+)>/);
+  if (!match || !match[1]) return "";
   return `${match[1]}`;
 };

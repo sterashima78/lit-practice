@@ -10,7 +10,7 @@ export default defineComponent({
   name: "VMyCard",
   props: {},
   emits: {},
-  setup(props, { emit }) {
+  setup() {
     const slots = useSlots();
     const h = _h.bind(getCurrentInstance());
     return () =>

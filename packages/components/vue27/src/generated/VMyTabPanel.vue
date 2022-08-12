@@ -4,10 +4,14 @@ import { h, useSlots, defineComponent } from "vue";
 export default defineComponent({
   name: "VMyTabPanel",
   props: {
-    name: { type: String, required: false },
+    name: {
+      type: String,
+      required: false,
+      default: "",
+    },
   },
   emits: {},
-  setup(props, { emit }) {
+  setup(props) {
     const slots = useSlots();
 
     return () =>

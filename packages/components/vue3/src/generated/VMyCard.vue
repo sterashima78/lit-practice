@@ -3,8 +3,6 @@
 import "@sterashima78/lit-practice-wc/my-card.js";
 import { h, useSlots } from "vue";
 
-const props = defineProps<{}>();
-const emit = defineEmits<{}>();
 const slots = useSlots();
 
 const render = () =>

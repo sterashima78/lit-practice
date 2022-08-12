@@ -13,30 +13,55 @@ const log = (a: unknown) => console.log(a);
 
 <template>
   <VMyTabGroup>
-    <VMyTab name="setting">Setting</VMyTab>
-    <VMyTab name="contents">Contents</VMyTab>
+    <VMyTab name="setting">
+      Setting
+    </VMyTab>
+    <VMyTab name="contents">
+      Contents
+    </VMyTab>
     <VMyTabPanel name="setting">
-      <label>Toggle <input type="checkbox" v-model="isOpen" /></label>
+      <label>Toggle <input
+        v-model="isOpen"
+        type="checkbox"
+      ></label>
     </VMyTabPanel>
     <VMyTabPanel name="contents">
       <VMyAccordion
-        :isOpen="isOpen"
+        :is-open="isOpen"
         @toggle="({ isOpen: open }) => (isOpen = open)"
       >
         <template #header>
-          <a href="https://vitejs.dev" target="_blank">
-            <img src="/vite.svg" class="logo" alt="Vite logo" />
+          <a
+            href="https://vitejs.dev"
+            target="_blank"
+          >
+            <img
+              src="/vite.svg"
+              class="logo"
+              alt="Vite logo"
+            >
           </a>
-          <a href="https://vuejs.org/" target="_blank">
-            <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
+          <a
+            href="https://vuejs.org/"
+            target="_blank"
+          >
+            <img
+              src="./assets/vue.svg"
+              class="logo vue"
+              alt="Vue logo"
+            >
           </a>
-          <p class="subtitle">hogehoge</p>
+          <p class="subtitle">
+            hogehoge
+          </p>
         </template>
         <VMyCard>
           <template #header>
             <p>Header</p>
           </template>
-          <button @click="log('click')">log</button>
+          <button @click="log('click')">
+            log
+          </button>
           <div class="contents">
             <p>Content</p>
             <p>Content</p>

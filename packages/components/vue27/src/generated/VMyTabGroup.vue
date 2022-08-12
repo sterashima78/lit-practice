@@ -5,7 +5,7 @@ export default defineComponent({
   name: "VMyTabGroup",
   props: {},
   emits: {},
-  setup(props, { emit }) {
+  setup() {
     const slots = useSlots();
 
     return () =>

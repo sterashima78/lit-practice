@@ -8,21 +8,32 @@ const toPropEntry = (prop: Attribute): string =>
 
 const toEventPayload = (type: string): string => {
   if (isVoidEvent(type)) return "";
-  const match = type.match(/CustomEvent<(.+)>/)!;
+  const match = type.match(/CustomEvent<(.+)>/);
+  if (!match || !match[1]) return "";
   return `, payload: ${match[1]}`;
 };
 const toEventEntry = (event: Event): string => `(e: "${event.name}"${toEventPayload(event.type.text)}): void;`;
+
+const toEventScripts = (events: NonNullable<CustomElement["events"]>) =>
+  events.length === 0 ? "" : /*javascript*/ `
+    const emit = defineEmits<{
+      ${events.map(toEventEntry).join("\n  ")}
+    }>()
+  `;
+
+const toEventPropss = (props: NonNullable<CustomElement["attributes"]>) =>
+  props.length === 0 ? "" : /*javascript*/ `
+  const props = defineProps<{
+    ${props.map(toPropEntry).join("\n  ")}
+  }>();
+  `;
 
 const toScripts = (
   props: NonNullable<CustomElement["attributes"]>,
   events: NonNullable<CustomElement["events"]>,
 ): string => /*javascript*/ `
-  const props = defineProps<{
-    ${props.map(toPropEntry).join("\n  ")}
-  }>();
-  const emit = defineEmits<{
-    ${events.map(toEventEntry).join("\n  ")}
-  }>()
+  ${toEventPropss(props)}
+  ${toEventScripts(events)}
   const slots = useSlots()
   `;
 
@@ -44,7 +55,7 @@ export const toProgram: ToProgram = (p) => {
   ${toScripts(p.attributes || [], p.events || [])}
   const render = ()=> ${
       render(
-        p.tagName!,
+        p.tagName || "",
         toAttrs(p.events || [], p.attributes || []),
         toSlots(p.slots || [], toSlotAttr),
       )

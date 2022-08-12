@@ -4,12 +4,16 @@ import { h, useSlots, defineComponent } from "vue";
 export default defineComponent({
   name: "VMyAccordion",
   props: {
-    isOpen: { type: Boolean, required: false },
+    isOpen: {
+      type: Boolean,
+      required: false,
+      default: false,
+    },
   },
   emits: {
     open: null,
     close: null,
-    toggle: (p: { isOpen: boolean }) => true,
+    toggle: (p: { isOpen: boolean }) => !!p,
   },
   setup(props, { emit }) {
     const slots = useSlots();

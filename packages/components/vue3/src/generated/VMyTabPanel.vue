@@ -6,7 +6,7 @@ import { h, useSlots } from "vue";
 const props = defineProps<{
   name?: string;
 }>();
-const emit = defineEmits<{}>();
+
 const slots = useSlots();
 
 const render = () =>

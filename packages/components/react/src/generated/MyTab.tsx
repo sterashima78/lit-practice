@@ -1,5 +1,6 @@
 import { ReactNode, useEffect, useRef } from "react";
 import "@sterashima78/lit-practice-wc/my-tab.js";
+import type * as Types from "@sterashima78/lit-practice-wc";
 
 export type MyTabProps = {
   children: ReactNode;
@@ -7,7 +8,7 @@ export type MyTabProps = {
 };
 
 export const MyTab = (props: MyTabProps): JSX.Element => {
-  const ref = useRef<HTMLElement>();
+  const ref = useRef<Types.MyTab>();
 
   const {
     children,
@@ -17,11 +18,10 @@ export const MyTab = (props: MyTabProps): JSX.Element => {
   // for name attribute
   useEffect(() => {
     if (ref.current) {
-      // @ts-ignore
       ref.current.name = name;
     }
   }, [name]);
 
-  // @ts-ignore
+  // @ts-expect-error カスタムエレメントに JSX の定義がない
   return <my-tab ref={ref}>{children}</my-tab>;
 };

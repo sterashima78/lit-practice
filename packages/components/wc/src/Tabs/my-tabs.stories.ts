@@ -10,7 +10,7 @@ export default {
 };
 
 export const Test: StoryObj = {
-  render: (args) =>
+  render: () =>
     html`
         <my-tab-group>
             <my-tab name="tab1">tab1</my-tab>

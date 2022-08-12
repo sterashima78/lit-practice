@@ -6,11 +6,13 @@ import { h, useSlots } from "vue";
 const props = defineProps<{
   isOpen?: boolean;
 }>();
+
 const emit = defineEmits<{
   (e: "open"): void;
   (e: "close"): void;
   (e: "toggle", payload: { isOpen: boolean }): void;
 }>();
+
 const slots = useSlots();
 
 const render = () =>

@@ -1,5 +1,6 @@
 import { ReactNode, useEffect, useRef } from "react";
 import "@sterashima78/lit-practice-wc/my-accordion.js";
+import type * as Types from "@sterashima78/lit-practice-wc";
 
 export type MyAccordionProps = {
   children: ReactNode;
@@ -10,7 +11,7 @@ export type MyAccordionProps = {
 };
 
 export const MyAccordion = (props: MyAccordionProps): JSX.Element => {
-  const ref = useRef<HTMLElement>();
+  const ref = useRef<Types.MyAccordion>();
 
   const {
     children,
@@ -23,42 +24,41 @@ export const MyAccordion = (props: MyAccordionProps): JSX.Element => {
   // for is-open attribute
   useEffect(() => {
     if (ref.current) {
-      // @ts-ignore
       ref.current.isOpen = isOpen;
     }
   }, [isOpen]);
 
   // for open event
   useEffect(() => {
-    if (!!onOpen) ref.current?.addEventListener("open", onOpen);
+    if (onOpen) ref.current?.addEventListener("open", onOpen);
     return () => {
-      if (!!onOpen) ref.current?.removeEventListener("open", onOpen);
+      if (onOpen) ref.current?.removeEventListener("open", onOpen);
     };
   }, [onOpen]);
 
   // for close event
   useEffect(() => {
-    if (!!onClose) ref.current?.addEventListener("close", onClose);
+    if (onClose) ref.current?.addEventListener("close", onClose);
     return () => {
-      if (!!onClose) ref.current?.removeEventListener("close", onClose);
+      if (onClose) ref.current?.removeEventListener("close", onClose);
     };
   }, [onClose]);
 
   // for toggle event
   useEffect(() => {
     let onToggleHandler: (e: CustomEvent<{ isOpen: boolean }>) => void;
-    if (!!onToggle) {
+    if (onToggle) {
       onToggleHandler = (e: CustomEvent<{ isOpen: boolean }>) => onToggle(e.detail);
-      // @ts-expect-error
+      // @ts-expect-error カスタムイベント定義が存在しない
       ref.current?.addEventListener("toggle", onToggleHandler);
     }
 
     return () => {
-      // @ts-expect-error
-      if (!!onToggleHandler) ref.current?.removeEventListener("toggle", onToggleHandler);
+      // @ts-expect-error カスタムイベント定義が存在しない
+      if (onToggleHandler) ref.current?.removeEventListener("toggle", onToggleHandler);
     };
   }, [onToggle]);
 
-  // @ts-ignore
+  // @ts-expect-error カスタムエレメントに JSX の定義がない
   return <my-accordion ref={ref}>{children}</my-accordion>;
 };
