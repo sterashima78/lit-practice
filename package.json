@@ -21,7 +21,11 @@
     "webpack": "5.74.0",
     "eslint": "8.21.0",
     "@typescript-eslint/eslint-plugin": "5.33.0",
-    "@typescript-eslint/parser": "5.33.0"
+    "@typescript-eslint/parser": "5.33.0",
+    "@storybook/addon-interactions": "7.0.0-alpha.18",
+    "@storybook/testing-library": "0.0.13",
+    "@storybook/jest": "0.0.10",
+    "start-server-and-test": "1.14.0"
   },
   "scripts": {
     "lint": "eslint . --ext ts,tsx,vue",

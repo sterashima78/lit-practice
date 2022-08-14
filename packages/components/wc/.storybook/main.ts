@@ -5,6 +5,10 @@ export default {
   ],
   "addons": [
     "@storybook/addon-essentials",
+    '@storybook/addon-interactions'
   ],
+  features: {
+    interactionsDebugger: true,
+  },
   "framework": "@storybook/web-components-webpack5",
 };

@@ -3,6 +3,7 @@ import { customElement, property } from "lit/decorators.js";
 import { classMap } from "lit/directives/class-map.js";
 import { styleMap } from "lit/directives/style-map.js";
 
+
 /**
  * An accordion element.
  *
@@ -63,10 +64,24 @@ export class MyAccordion extends LitElement {
 
   override render = () =>
     html`
-        <button @click="${this.toggle}" class="accordion ${classMap({ active: this.isOpen })}">
+        <button 
+          @click="${this.toggle}" 
+          class="accordion 
+          ${classMap({ active: this.isOpen })}"
+          aria-expanded="${this.isOpen}"
+          aria-controls="contents"
+          id="header"
+        >
             <slot name="header"></slot>
         </button>
-        <div class="panel" style="${styleMap({ display: this.isOpen ? "block" : "none" })}">
+        <div 
+          class="panel" 
+          style="${styleMap({ display: this.isOpen ? "block" : "none" })}"
+          id="contents"
+          role="region"
+          aria-labelledby="header"
+          aria-label="contents"
+        >
             <slot></slot>
         </div>`;
 }
