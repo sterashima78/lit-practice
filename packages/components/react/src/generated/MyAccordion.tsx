@@ -30,24 +30,24 @@ export const MyAccordion = (props: MyAccordionProps): JSX.Element => {
 
   // for open event
   useEffect(() => {
-    if (onOpen) ref.current?.addEventListener("open", onOpen);
+    if (!!onOpen) ref.current?.addEventListener("open", onOpen);
     return () => {
-      if (onOpen) ref.current?.removeEventListener("open", onOpen);
+      if (!!onOpen) ref.current?.removeEventListener("open", onOpen);
     };
   }, [onOpen]);
 
   // for close event
   useEffect(() => {
-    if (onClose) ref.current?.addEventListener("close", onClose);
+    if (!!onClose) ref.current?.addEventListener("close", onClose);
     return () => {
-      if (onClose) ref.current?.removeEventListener("close", onClose);
+      if (!!onClose) ref.current?.removeEventListener("close", onClose);
     };
   }, [onClose]);
 
   // for toggle event
   useEffect(() => {
     let onToggleHandler: (e: CustomEvent<{ isOpen: boolean }>) => void;
-    if (onToggle) {
+    if (!!onToggle) {
       onToggleHandler = (e: CustomEvent<{ isOpen: boolean }>) => onToggle(e.detail);
       // @ts-expect-error カスタムイベント定義が存在しない
       ref.current?.addEventListener("toggle", onToggleHandler);
@@ -55,7 +55,7 @@ export const MyAccordion = (props: MyAccordionProps): JSX.Element => {
 
     return () => {
       // @ts-expect-error カスタムイベント定義が存在しない
-      if (onToggleHandler) ref.current?.removeEventListener("toggle", onToggleHandler);
+      if (!!onToggleHandler) ref.current?.removeEventListener("toggle", onToggleHandler);
     };
   }, [onToggle]);
 

@@ -5,7 +5,7 @@ export default {
   ],
   "addons": [
     "@storybook/addon-essentials",
-    '@storybook/addon-interactions'
+    "@storybook/addon-interactions",
   ],
   features: {
     interactionsDebugger: true,
