@@ -1,6 +1,6 @@
 {
   "name": "@sterashima78/lit-practice-token",
-  "version": "0.0.0",
+  "version": "0.0.2-alpha.1",
   "description": "",
   "main": "libs/js/colors.js",
   "types": "libs/js/colors.d.ts",

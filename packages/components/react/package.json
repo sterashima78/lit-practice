@@ -8,7 +8,7 @@
     "type": "git",
     "url": "git+https://github.com/sterashima78/lit-practice.git"
   },
-  "version": "0.0.2-alpha.0",
+  "version": "0.0.2-alpha.1",
   "type": "module",
   "main": "dist/react-my-components.js",
   "exports": {
@@ -30,12 +30,12 @@
   },
   "dependencies": {
     "@lit-labs/react": "1.0.7",
-    "@sterashima78/lit-practice-wc": "^0.0.2-alpha.0"
+    "@sterashima78/lit-practice-wc": "^0.0.2-alpha.1"
   },
   "devDependencies": {
     "@babel/core": "7.18.9",
     "@sterashima78/lit-practice-generator-cli": "*",
-    "@sterashima78/lit-practice-token": "*",
+    "@sterashima78/lit-practice-token": "^0.0.2-alpha.1",
     "@storybook/react": "7.0.0-alpha.21",
     "@storybook/react-webpack5": "7.0.0-alpha.21",
     "@types/node": "18.6.2",
