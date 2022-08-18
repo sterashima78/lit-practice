@@ -3,3 +3,4 @@ export { default as VMyCard } from "./VMyCard.vue";
 export { default as VMyTab } from "./VMyTab.vue";
 export { default as VMyTabGroup } from "./VMyTabGroup.vue";
 export { default as VMyTabPanel } from "./VMyTabPanel.vue";
+export { default as VMyText } from "./VMyText.vue";

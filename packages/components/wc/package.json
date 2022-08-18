@@ -40,6 +40,12 @@
         "types": "./lib/my-tab-panel.d.ts",
         "default": "./lib/my-tab-panel.js"
       }
+    },
+    "./my-text.js": {
+      "import": {
+        "types": "./lib/my-text.d.ts",
+        "default": "./lib/my-text.js"
+      }
     }
   },
   "types": "lib/index.d.ts",
@@ -59,7 +65,7 @@
     "lit": "2.2.8"
   },
   "peerDependencies": {
-    "@sterashima78/lit-practice-token": "*"
+    "@sterashima78/lit-practice-token": "^0.0.2"
   },
   "devDependencies": {
     "@babel/core": "7.18.9",

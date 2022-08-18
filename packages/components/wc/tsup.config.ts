@@ -8,6 +8,7 @@ export default defineConfig({
     "my-tab-panel": "src/Tabs/my-tab-panel.ts",
     "my-tab": "src/Tabs/my-tab.ts",
     "my-accordion": "src/Accordion/my-accordion.ts",
+    "my-text": "src/Text/my-text.ts",
   },
   outDir: "lib",
   format: [
