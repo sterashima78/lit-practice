@@ -35,6 +35,7 @@
     "postbuild": "npm-run-all format",
     "type-check": "turbo run type-check",
     "versionup": "lerna version --conventional-commits",
+    "versionup:prerelease": "lerna version --conventional-prerelease --conventional-commits",
     "versionup:patch": "lerna version patch --conventional-commits",
     "versionup:minor": "lerna version minor --conventional-commits",
     "versionup:major": "lerna version major --conventional-commits",

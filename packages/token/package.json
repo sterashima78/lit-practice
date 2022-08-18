@@ -1,6 +1,6 @@
 {
   "name": "@sterashima78/lit-practice-token",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "",
   "main": "libs/js/colors.js",
   "types": "libs/js/colors.d.ts",
@@ -12,6 +12,10 @@
   },
   "devDependencies": {
     "style-dictionary": "3.7.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sterashima78/lit-practice.git"
   },
   "keywords": [],
   "author": "",
