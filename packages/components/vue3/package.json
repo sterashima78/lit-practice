@@ -1,6 +1,9 @@
 {
   "name": "@sterashima78/lit-practice-vue3",
-  "private": true,
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com",
+    "access": "restricted"
+  },
   "version": "0.0.0",
   "type": "module",
   "main": "dist/vue-my-components.js",
@@ -30,8 +33,8 @@
     "typescript": "4.7.4",
     "vite": "3.0.3",
     "vue-tsc": "0.39.2",
-    "@storybook/vue3-webpack5": "7.0.0-alpha.18",
-    "@storybook/vue3": "7.0.0-alpha.18",
+    "@storybook/vue3-webpack5": "7.0.0-alpha.21",
+    "@storybook/vue3": "7.0.0-alpha.21",
     "@sterashima78/lit-practice-generator-cli": "*",
     "@sterashima78/lit-practice-token": "*",
     "webpack": "5.74.0",

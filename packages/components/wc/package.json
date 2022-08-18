@@ -1,6 +1,9 @@
 {
   "name": "@sterashima78/lit-practice-wc",
-  "private": true,
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com",
+    "access": "restricted"
+  },
   "version": "0.0.0",
   "type": "module",
   "main": "lib/index.js",
@@ -56,9 +59,13 @@
   },
   "devDependencies": {
     "@custom-elements-manifest/analyzer": "0.6.3",
-    "@storybook/web-components-webpack5": "7.0.0-alpha.18",
-    "@storybook/web-components": "7.0.0-alpha.18",
+    "@storybook/web-components-webpack5": "7.0.0-alpha.21",
+    "@storybook/web-components": "7.0.0-alpha.21",
+    "@storybook/store": "7.0.0-alpha.21",
+    "@storybook/csf-tools": "7.0.0-alpha.21",
+    "@storybook/core-common": "7.0.0-alpha.21",
     "@storybook/test-runner": "0.6.0-next.1",
+    "playwright-core": "1.25.0",
     "jest": "28.1.3",
     "jest-playwright-preset": "2.0.0",
     "jest-environment-node": "28.1.3",
