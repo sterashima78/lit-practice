@@ -9,7 +9,11 @@
     }
   },
   "packages": [
-    "packages/components/*",
+    "packages/components/wc",
+    "packages/components/react",
+    "packages/components/vue3",
+    "packages/components/vue27",
+    "packages/components/vue26",
     "packages/token"
   ]
 }
