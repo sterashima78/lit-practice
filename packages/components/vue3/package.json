@@ -8,7 +8,7 @@
     "type": "git",
     "url": "git+https://github.com/sterashima78/lit-practice.git"
   },
-  "version": "0.0.1",
+  "version": "0.0.2-alpha.0",
   "type": "module",
   "main": "dist/vue-my-components.js",
   "exports": {
@@ -29,7 +29,7 @@
     "serve:storybook": "storybook dev -p 6006"
   },
   "dependencies": {
-    "@sterashima78/lit-practice-wc": "^0.0.1"
+    "@sterashima78/lit-practice-wc": "^0.0.2-alpha.0"
   },
   "devDependencies": {
     "@babel/core": "7.18.9",
