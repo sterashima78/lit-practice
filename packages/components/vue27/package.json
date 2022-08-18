@@ -4,7 +4,7 @@
     "registry": "https://npm.pkg.github.com",
     "access": "restricted"
   },
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "main": "dist/vue-my-components.js",
   "exports": {
@@ -26,27 +26,27 @@
     "serve:storybook": "storybook dev -p 6006"
   },
   "dependencies": {
-    "@sterashima78/lit-practice-wc": "*"
+    "@sterashima78/lit-practice-wc": "^0.0.1"
   },
   "devDependencies": {
-    "vue": "2.7.8",
-    "@vitejs/plugin-vue2": "1.1.2",
-    "typescript": "4.7.4",
-    "vite": "3.0.3",
-    "vue-tsc": "0.39.2",
-    "@storybook/vue-webpack5": "7.0.0-alpha.21",
-    "@storybook/vue": "7.0.0-alpha.21",
-    "@sterashima78/lit-practice-generator-cli": "*",
-    "@sterashima78/lit-practice-token": "*",
     "@babel/core": "7.18.9",
     "@babel/preset-env": "7.18.9",
+    "@sterashima78/lit-practice-generator-cli": "*",
+    "@sterashima78/lit-practice-token": "*",
+    "@storybook/vue": "7.0.0-alpha.21",
+    "@storybook/vue-webpack5": "7.0.0-alpha.21",
+    "@vitejs/plugin-vue2": "1.1.2",
     "babel-loader": "8.2.5",
     "css-loader": "6.7.1",
-    "webpack": "5.74.0",
+    "eslint": "8.21.0",
+    "eslint-plugin-vue": "9.3.0",
+    "typescript": "4.7.4",
+    "vite": "3.0.3",
+    "vue": "2.7.8",
     "vue-loader": "15.10.0",
     "vue-template-compiler": "2.7.8",
-    "eslint-plugin-vue": "9.3.0",
-    "eslint": "8.21.0"
+    "vue-tsc": "0.39.2",
+    "webpack": "5.74.0"
   },
   "peerDependencies": {
     "vue": "^2.7.0"
