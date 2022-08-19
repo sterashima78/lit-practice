@@ -8,7 +8,7 @@
     "type": "git",
     "url": "git+https://github.com/sterashima78/lit-practice.git"
   },
-  "version": "0.0.2",
+  "version": "0.1.0-alpha.0",
   "type": "module",
   "main": "dist/react-my-components.js",
   "exports": {
@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "@lit-labs/react": "1.0.7",
-    "@sterashima78/lit-practice-wc": "^0.0.2"
+    "@sterashima78/lit-practice-wc": "^0.1.0-alpha.0"
   },
   "devDependencies": {
     "@babel/core": "7.18.9",

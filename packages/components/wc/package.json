@@ -8,7 +8,7 @@
     "type": "git",
     "url": "git+https://github.com/sterashima78/lit-practice.git"
   },
-  "version": "0.0.2",
+  "version": "0.1.0-alpha.0",
   "type": "module",
   "main": "lib/index.js",
   "exports": {
