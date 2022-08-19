@@ -37,11 +37,8 @@
     "build": "turbo run build",
     "postbuild": "npm-run-all format",
     "type-check": "turbo run type-check",
-    "versionup": "lerna version --conventional-commits",
-    "versionup:prerelease": "lerna version --conventional-prerelease --conventional-commits",
-    "versionup:patch": "lerna version patch --conventional-commits",
-    "versionup:minor": "lerna version minor --conventional-commits",
-    "versionup:major": "lerna version major --conventional-commits",
+    "versionup:pre": "lerna version --conventional-prerelease --conventional-commits",
+    "versionup": "lerna version --conventional-commits --conventional-graduate",
     "release": "lerna publish from-package"
   },
   "engines": {
