@@ -39,6 +39,9 @@ export class MyAccordion extends LitElement {
         overflow: hidden;
     }`;
 
+  /**
+   * アコーディオンが開いている状態であるか否かを示す
+   */
   @property({ type: Boolean, attribute: "is-open" })
   isOpen = false;
 
