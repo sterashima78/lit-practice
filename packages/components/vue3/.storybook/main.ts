@@ -6,17 +6,5 @@ export default {
   "addons": [
     "@storybook/addon-essentials",
   ],
-  "framework": "@storybook/vue3-webpack5",
-  webpackFinal: async (config) => {
-    const loader = config.module.rules.find(({ loader }) => typeof loader === "string" && loader.match("vue-loader"));
-    if (loader) {
-      loader.options = {
-        ...(loader.options || {}),
-        compilerOptions: {
-          isCustomElement: (tag: string) => tag.startsWith("my-"),
-        },
-      };
-    }
-    return config;
-  },
+  "framework": "@storybook/vue3-vite"
 };

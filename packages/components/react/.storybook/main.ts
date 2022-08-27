@@ -6,15 +6,5 @@ export default {
   "addons": [
     "@storybook/addon-essentials",
   ],
-  "framework": "@storybook/react-webpack5",
-  webpackFinal: async (config) => ({
-    ...config,
-    resolve: {
-      ...config.resolve,
-      fallback: {
-        ...config.resolve.fallback,
-        assert: require.resolve("assert"),
-      },
-    },
-  }),
+  "framework": "@storybook/react-vite",
 };
