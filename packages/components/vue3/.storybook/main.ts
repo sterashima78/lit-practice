@@ -6,5 +6,5 @@ export default {
   "addons": [
     "@storybook/addon-essentials",
   ],
-  "framework": "@storybook/vue3-vite"
+  "framework": "@storybook/vue3-vite",
 };

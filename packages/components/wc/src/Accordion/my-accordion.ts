@@ -3,9 +3,8 @@ import { customElement, property } from "lit/decorators.js";
 import { classMap } from "lit/directives/class-map.js";
 import { styleMap } from "lit/directives/style-map.js";
 
-
 const toggle = (dispatch: (c: CustomEvent) => void, isOpen: boolean) => {
-  const open = !isOpen
+  const open = !isOpen;
   if (open) {
     dispatch(new CustomEvent("open"));
   } else {
@@ -18,35 +17,33 @@ const toggle = (dispatch: (c: CustomEvent) => void, isOpen: boolean) => {
       },
     }),
   );
-  return open
-}
-
+  return open;
+};
 
 if (import.meta.vitest) {
-  const { describe, test, expect, vi } = import.meta.vitest
-  describe('MyAccordion', () => {
-    describe('toggle function', () => {
-      test("to open", ()=> {
-        const dispatch = vi.fn()
-        expect(toggle(dispatch, false)).toBeTruthy()
-        expect(dispatch.mock.calls[0]?.[0].type).toEqual("open")
-        expect(dispatch.mock.calls[0]?.[0].detail).toEqual(null)
-        expect(dispatch.mock.calls[1]?.[0].type).toEqual("toggle")
-        expect(dispatch.mock.calls[1]?.[0].detail).toEqual({ isOpen: true })
-      })
+  const { describe, test, expect, vi } = import.meta.vitest;
+  describe("MyAccordion", () => {
+    describe("toggle function", () => {
+      test("to open", () => {
+        const dispatch = vi.fn();
+        expect(toggle(dispatch, false)).toBeTruthy();
+        expect(dispatch.mock.calls[0]?.[0].type).toEqual("open");
+        expect(dispatch.mock.calls[0]?.[0].detail).toEqual(null);
+        expect(dispatch.mock.calls[1]?.[0].type).toEqual("toggle");
+        expect(dispatch.mock.calls[1]?.[0].detail).toEqual({ isOpen: true });
+      });
 
-      test("to close", ()=> {
-        const dispatch = vi.fn()
-        expect(toggle(dispatch, true)).toBeFalsy()
-        expect(dispatch.mock.calls[0]?.[0].type).toEqual("close")
-        expect(dispatch.mock.calls[0]?.[0].detail).toEqual(null)
-        expect(dispatch.mock.calls[1]?.[0].type).toEqual("toggle")
-        expect(dispatch.mock.calls[1]?.[0].detail).toEqual({ isOpen: false })
-      })
-    })
-  })
+      test("to close", () => {
+        const dispatch = vi.fn();
+        expect(toggle(dispatch, true)).toBeFalsy();
+        expect(dispatch.mock.calls[0]?.[0].type).toEqual("close");
+        expect(dispatch.mock.calls[0]?.[0].detail).toEqual(null);
+        expect(dispatch.mock.calls[1]?.[0].type).toEqual("toggle");
+        expect(dispatch.mock.calls[1]?.[0].detail).toEqual({ isOpen: false });
+      });
+    });
+  });
 }
-
 
 /**
  * An accordion element.
@@ -94,9 +91,8 @@ export class MyAccordion extends LitElement {
     /** @type {CustomEvent<void>} open - 開いたとき */
     /** @type {CustomEvent<void>} close - 閉じたとき */
     /** @type {CustomEvent<{ isOpen: boolean }>} toggle - 開閉したとき */
-    this.isOpen = toggle((c)=> this.dispatchEvent(c), this.isOpen)
+    this.isOpen = toggle((c) => this.dispatchEvent(c), this.isOpen);
   }
-
 
   override render = () =>
     html`
@@ -127,31 +123,31 @@ if (import.meta.vitest) {
    * @vitest-environment happy-dom
    */
 
-  const { describe, test, expect, vi } = import.meta.vitest
-  describe('MyAccordion', () => {
-    test('toggle', () => {
-      const accordion = new MyAccordion()
-      const dispatchEvent = vi.spyOn(accordion, "dispatchEvent")
-      expect(accordion.isOpen).toBeFalsy()
-      expect(dispatchEvent).not.toBeCalled()
-      dispatchEvent.mockClear()
-      accordion.toggle()
-      expect(dispatchEvent.mock.calls[0]?.[0]?.type).toEqual("open")
-      expect((dispatchEvent.mock.calls[0]?.[0] as any).detail).toEqual(null)
-      expect(dispatchEvent.mock.calls[1]?.[0]?.type).toEqual("toggle")
-      expect((dispatchEvent.mock.calls[1]?.[0] as any).detail).toEqual({ isOpen: true })
+  const { describe, test, expect, vi } = import.meta.vitest;
+  describe("MyAccordion", () => {
+    test("toggle", () => {
+      const accordion = new MyAccordion();
+      const dispatchEvent = vi.spyOn(accordion, "dispatchEvent");
+      expect(accordion.isOpen).toBeFalsy();
+      expect(dispatchEvent).not.toBeCalled();
+      dispatchEvent.mockClear();
+      accordion.toggle();
+      expect(dispatchEvent.mock.calls[0]?.[0]?.type).toEqual("open");
+      expect((dispatchEvent.mock.calls[0]?.[0] as any).detail).toEqual(null);
+      expect(dispatchEvent.mock.calls[1]?.[0]?.type).toEqual("toggle");
+      expect((dispatchEvent.mock.calls[1]?.[0] as any).detail).toEqual({ isOpen: true });
 
-      expect(accordion.isOpen).toBeTruthy()
-      dispatchEvent.mockClear()
-      accordion.toggle()
-      expect(dispatchEvent.mock.calls[0]?.[0]?.type).toEqual("close")
-      expect((dispatchEvent.mock.calls[0]?.[0] as any).detail).toEqual(null)
-      expect(dispatchEvent.mock.calls[1]?.[0]?.type).toEqual("toggle")
-      expect((dispatchEvent.mock.calls[1]?.[0] as any).detail).toEqual({ isOpen: false })
+      expect(accordion.isOpen).toBeTruthy();
+      dispatchEvent.mockClear();
+      accordion.toggle();
+      expect(dispatchEvent.mock.calls[0]?.[0]?.type).toEqual("close");
+      expect((dispatchEvent.mock.calls[0]?.[0] as any).detail).toEqual(null);
+      expect(dispatchEvent.mock.calls[1]?.[0]?.type).toEqual("toggle");
+      expect((dispatchEvent.mock.calls[1]?.[0] as any).detail).toEqual({ isOpen: false });
 
-      expect(accordion.isOpen).toBeFalsy()
-    })
-  })
+      expect(accordion.isOpen).toBeFalsy();
+    });
+  });
 }
 
 declare global {
